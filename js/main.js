@@ -8,6 +8,7 @@ $(document).ready(function() {
 		
 		if ( val == "doc" ) {
 			$(".doctor").addClass("show");
+			$(".nurse input").removeAttr('required');
 		} else if (val == "nur") {
 			$(".nurse").addClass("show");
 			$(".nurse input").attr('required','required');
@@ -47,14 +48,20 @@ $(".back-btn").on("click", function(e){
 });
 
 $(".radio").on("click", function(e){
- 	 $("#SV").prop('disabled', false); 
- 	 $(".cw").prop('disabled', true);
+ 	$("#SV").prop('disabled', false); 
+ 	$(".cw").prop('disabled', true);
+ 	$("#SV").attr('required','required'); 
+ 	$(".cw").removeAttr('required');
+ 	$(".cw").closest("label").addClass("error");
+
  	
 });
 
 $(".radio2").on("click", function(e){
- 	 $("#SV").prop('disabled', true); 
- 	 $(".cw").prop('disabled', false);
+ 	$("#SV").prop('disabled', true); 
+ 	$(".cw").prop('disabled', false);
+ 	$("#SV").removeAttr('required');
+ 	$(".cw").attr('required','required');
 });
 
 	// form validation
@@ -101,6 +108,7 @@ function validateField( field ) {
 	var val = field.val();
 	var valid = true;
 
+	console.log(field);
 	// is it a <select>?
 	if ( field.is('select') ) {
 		val = field.find("option:selected").attr("value");
