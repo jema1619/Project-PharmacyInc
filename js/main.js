@@ -94,7 +94,7 @@ $(document).ready(function() {
 				details.push($(this).val().toLowerCase());
 			}
 		});
-
+		$(".formerror").addClass("hidden");
 		if ( !postform ) {
 			e.preventDefault();
 		} else {
@@ -172,7 +172,7 @@ $(document).ready(function() {
 						nextSection();
 
 					}else{
-						alert(details);
+						$(".formerror").removeClass("hidden");
 					}
 						
 				});
