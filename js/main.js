@@ -10,6 +10,7 @@ $(document).ready(function() {
 			$(".doctor").addClass("show");
 		} else if (val == "nur") {
 			$(".nurse").addClass("show");
+			$(".nurse input").attr('required','required');
 		}
 	} );
 
@@ -48,6 +49,7 @@ $(".back-btn").on("click", function(e){
 $(".radio").on("click", function(e){
  	 $("#SV").prop('disabled', false); 
  	 $(".cw").prop('disabled', true);
+ 	
 });
 
 $(".radio2").on("click", function(e){
