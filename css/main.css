@@ -234,6 +234,11 @@ select {
   max-height: 260px;
   margin-top: 19px;
 }
+ /*Add some animation for it*/
+ /*Stile the error message*/
+.formerror.hidden{
+  display: none;
+}
 .doctor label:first-child,
 .nurse label:first-child {
   margin-top: 18px;
@@ -313,3 +318,4 @@ fieldset {
   color: #bf2424;
   display: block;
 }
+

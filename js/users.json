@@ -1,7 +1,15 @@
 [{
-	"username": "fredrik",
-	"password": "fredrik"
+	"firstname": "erik",
+	"lastname": "svensson",
+	"profession": "nur",
+	"svnumber": "null",
+	"city": "jonkoping",
+	"workplace": "farm"
 },{
-	"username": "john",
-	"password": "john"
+	"firstname": "elisabeth",
+	"lastname": "janson",
+	"profession": "doc",
+	"svnumber": "123456",
+	"city": "malmo",
+	"workplace": "farma"
 }]
