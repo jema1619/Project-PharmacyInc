@@ -16,7 +16,7 @@ $(document).ready(function() {
 	function goToSection(i){
   $("fieldset:gt("+i+")").removeClass("current").addClass("next");
   $("fieldset:lt("+i+")").removeClass("current");
-   $("li:lt("+i+")").removeClass("bar-current").addClass("bar-done");
+  $("li:lt("+i+")").removeClass("bar-current").addClass("bar-done");
   $("li").eq(i).addClass("bar-current").siblings().removeClass("bar-current");
   $("fieldset").eq(i).removeClass("next").addClass("current active");
       if ($("fieldset.current").index() == 1 ){
@@ -46,13 +46,13 @@ $(".back-btn").on("click", function(e){
 });
 
 $(".radio").on("click", function(e){
- 	 $("#SV").prop('disabled', true); 
- 	 $(".cw").prop('disabled', false);
+ 	 $("#SV").prop('disabled', false); 
+ 	 $(".cw").prop('disabled', true);
 });
 
 $(".radio2").on("click", function(e){
- 	 $("#SV").prop('disabled', false); 
- 	 $(".cw").prop('disabled', true);
+ 	 $("#SV").prop('disabled', true); 
+ 	 $(".cw").prop('disabled', false);
 });
 
 	// form validation

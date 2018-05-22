@@ -139,7 +139,7 @@ input[type='text'],
 select, input[type='password'],
 input[type='email'] {
   border: solid 1px #ddd;
-  padding: 10px 6px;
+  padding: 6px;
   width: 100%;
   display: block;
   font-size: 16px;
@@ -147,10 +147,14 @@ input[type='email'] {
   margin-top: 6px;
 }
 
-input[type='radio'] {
-      -webkit-appearance: radio;
+#radio2 {
+    margin-top: 6em;
 }
 
+input[type='radio'] {
+    margin-top: 3em;
+    -webkit-appearance: radio;
+}
 
 
 input[type='number'] {
@@ -164,8 +168,23 @@ input[type='number'] {
 
 .extra-input {
     float: right;
+    width: 100%;
+}
+
+.sv-nr {
     width: 80%;
 }
+
+.doc-city {
+    margin-top: 1em;
+    width: 80%;
+}
+
+.doc-work {
+    margin-top: -6px;
+    width: 80%;
+}
+
 
 input[type=submit] {
     background: #000;
@@ -197,8 +216,9 @@ input[type=submit] {
 }
 
 select {
-    height:41px;
-    line-height:41px;
+    font-size: 14px;
+    height: 36px;
+    line-height: 36px;
     border-radius: 0;
 }
 
@@ -211,6 +231,7 @@ select {
 .doctor.show,
 .nurse.show {
   max-height: 260px;
+  margin-top: 19px;
 }
 .doctor label:first-child,
 .nurse label:first-child {
@@ -278,7 +299,7 @@ fieldset {
     width: 100%;
     opacity: 1;
     z-index: 999;
-    padding: 11px;
+    padding: 6px;
     border-left: none;
     position: relative;
     }
