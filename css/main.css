@@ -239,6 +239,10 @@ select {
 .formerror.hidden{
   display: none;
 }
+.formerror {
+  display: block;
+  height: 200px;
+}
 .doctor label:first-child,
 .nurse label:first-child {
   margin-top: 18px;
@@ -310,7 +314,7 @@ fieldset {
     position: relative;
     }
 
-     .next {
+.next {
     left: 640px;
   }
 
@@ -318,4 +322,3 @@ fieldset {
   color: #bf2424;
   display: block;
 }
-

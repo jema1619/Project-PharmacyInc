@@ -22,7 +22,10 @@
 			      <li class="bar"><span>2.</span></li>
 			      <li class="bar"><span>3.</span></li>
 			    </ul>
-			    <div class="formerror hidden">Could not find you in the database! Please check your information and try again</div>
+			    <div class="formerror hidden">
+			    	<p>Could not find you in the database! Please check your information and try again</p>
+			    	<a id="manually" href="#">Manually</a>
+			    </div>
 				<div id="fieldsets">
 					<fieldset class="current">
 						<label>
@@ -99,38 +102,47 @@
 						</div>
 					</fieldset>
 					<fieldset class="next">
-						<label>
-							Email
-							<input type="email" name="email">
-							<div class="errormessage">
-								Please enter an email
-							</div>
-						</label>
-						<label>
-							Speciality
-							<input type="text" name="email">
-							<div class="errormessage">
-								Please enter speciality
-							</div>
-						</label>
-						<label>
-							Password
-							<input type="password" name="password">
-							<div class="errormessage">
-								Please enter a password
-							</div>
-						</label>
-						<label>
-							Confirm Password
-							<input type="password" name="password">
-							<div class="errormessage">
-								Please confirm password
-							</div>
-						</label>
+						<div id="step2-success" >
+							<p></p>
+							<label>
+								Email
+								<input type="email" name="email">
+								<div class="errormessage">
+									Please enter an email
+								</div>
+							</label>
+							<label class="delete">
+								Speciality
+								<input type="text" name="email">
+								<div class="errormessage">
+									Please enter speciality
+								</div>
+							</label>
+							<label class="delete">
+								Password
+								<input type="password" name="password">
+								<div class="errormessage">
+									Please enter a password
+								</div>
+							</label>
+							<label class="delete">
+								Confirm Password
+								<input type="password" name="password">
+								<div class="errormessage">
+									Please confirm password
+								</div>
+							</label>
+						</div>
 					</fieldset>
-					<fieldset class="next">
-						<h2>Thank you fo registering!</h2>
-						<p>Click OK to be redirected to the home page.</p>
+					<fieldset class="next last">
+						<div class="success" >
+							<h2>Thank you for registering!</h2>
+							<p>Click OK to be redirected to the home page.</p>
+						</div>
+						<div class="manual">
+							<h2>Thank you!</h2>
+							<p>You will get notified within 2-3 workdays!</p>
+						</div>
 					</fieldset>
 					<a class="back-btn">Back</a>
   					<input type="submit" value="Next">

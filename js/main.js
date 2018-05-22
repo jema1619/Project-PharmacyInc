@@ -1,6 +1,8 @@
 var ok=0;
 var j;
 $(document).ready(function() {
+
+	$(".manual").hide();
 	
 	// show/hide stuff based on if user is doc or not
 	$("#iam").change( function() {
@@ -67,6 +69,21 @@ $(document).ready(function() {
 	 	$("#SV").closest("label").removeClass("error");
 	});
 
+
+	$("#manually").on("click", function(e){		
+		$( ".delete" ).remove();
+		$( "#step2-success p" ).text( "We ned to manually register you. Please give us your email to get notified" );
+		$('.next input').attr('required','required');
+		ok++;
+		nextSection();
+		$(".formerror").addClass("hidden");
+		$(".success").hide();
+		$(".manual").show();
+
+	});
+
+
+
 	$("input").blur(function() {
 		var field = $(this);
 
@@ -94,9 +111,11 @@ $(document).ready(function() {
 				details.push($(this).val().toLowerCase());
 			}
 		});
-		$(".formerror").addClass("hidden");
+
 		if ( !postform ) {
 			e.preventDefault();
+			console.log(postform);
+
 		} else {
 			e.preventDefault();
 				if(ok!=1){
@@ -126,10 +145,10 @@ $(document).ready(function() {
 								if(details[k] == data[i].svnumber){
 									correct++;
 								}
-							
 							}
 							if(correct==details.length){
 								found=true;
+
 							}else{
 								i++;
 								correct=0;
@@ -165,16 +184,16 @@ $(document).ready(function() {
 						}
 						
 					}
-					
 					if(found==true){
 						$('.next input').attr('required','required');
 						ok++;
 						nextSection();
+						$(".formerror").addClass("hidden");
 
 					}else{
+						//alert(details);
 						$(".formerror").removeClass("hidden");
-					}
-						
+					}	
 				});
 			}
 
