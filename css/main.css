@@ -1,0 +1,293 @@
+* {
+	font-family: 'Merriweather', serif;
+	font-weight: 400;
+	-webkit-font-smoothing: antialiased;
+}
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+html, body {
+	margin: 0 auto;
+	padding: 0;
+	overflow-x: hidden;
+	max-width: 375px;
+}
+
+body {
+  padding: 22px;
+}
+
+.inside-container {
+  position: relative;
+}
+
+form {
+  position: relative;
+}
+
+#fieldsets {
+    min-height: 340px;
+    margin: 0 auto;
+    padding: 0px 3px;
+    box-sizing: border-box;
+  }
+
+li {
+  color: #a7a7a7;
+  border-left: 1px solid #aaa;
+    text-decoration: none;
+    padding: 0 6px;
+    float: left;
+    width: 33%;
+    box-sizing: border-box;
+    text-align: center;
+    font-weight: bold;
+    line-height: 30px;
+    background: #ddd;
+    position: relative;
+}
+    
+span {
+    opacity: 0;
+    cursor: not-allowed;
+}
+
+#progressBar {
+  position: relative;
+  list-style: none;
+  margin: 0 0 1em;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+  overflow: hidden;
+}
+#progressBar .bar {
+  position: relative;
+  float: left;
+  display: inline-block;
+  line-height: 26px;
+  padding: 0 40px 0 20px;
+  background-color: #eee;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#progressBar .bar:before, #progressBar .bar:after {
+  position: absolute;
+  left: -6px;
+  display: block;
+  content: '';
+  background-color: #eee;
+  border-left: 4px solid #FFF;
+  width: 13px;
+  height: 13px;
+}
+#progressBar .bar:after {
+  top: 0;
+  -moz-transform: skew(30deg);
+  -ms-transform: skew(30deg);
+  -webkit-transform: skew(30deg);
+  transform: skew(30deg);
+}
+#progressBar .bar:before {
+  bottom: 0;
+  -moz-transform: skew(-30deg);
+  -ms-transform: skew(-30deg);
+  -webkit-transform: skew(-30deg);
+  transform: skew(-30deg);
+}
+
+#progressBar .bar:first-child:before, #progressBar .bar:first-child:after {
+  content: none;
+}
+
+#progressBar .bar.bar-current {
+    border-left: none;
+    background-color: yellow;
+}
+
+#progressBar .bar.bar-current:before, #progressBar .bar.bar-current:after {
+  background-color: yellow;
+}
+
+#progressBar .bar.bar-done {
+  color: #FFF;
+  background-color: green;
+}
+
+#progressBar .bar.bar-done:before, #progressBar .bar.bar-done:after {
+  background-color: green;
+}
+
+
+label {
+  display: block;
+  font-size: 14px;
+  position: relative;
+}
+
+label + label {
+  margin-top: 20px;
+}
+
+input {
+  -webkit-appearance: none;
+  border: none;
+}
+
+input[type='text'],
+select, input[type='password'],
+input[type='email'] {
+  border: solid 1px #ddd;
+  padding: 10px 6px;
+  width: 100%;
+  display: block;
+  font-size: 16px;
+  line-height: 1;
+  margin-top: 6px;
+}
+
+input[type='radio'] {
+      -webkit-appearance: radio;
+}
+
+
+
+input[type='number'] {
+    border: solid 1px #ddd;
+    padding: 10px 6px;
+    display: block;
+  font-size: 16px;
+  line-height: 1;
+  margin-top: 6px;
+}
+
+.extra-input {
+    float: right;
+    width: 80%;
+}
+
+input[type=submit] {
+    background: #000;
+    margin: 6px;
+    cursor: pointer;
+    float: right;
+    padding: 10px 15px;
+    color: #fff;
+    font-size: 16px;
+    display: inline-block;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+}
+
+.back-btn {
+    display: none;
+}
+
+.visible {
+    display: inline-block;
+     border: none;
+    background: #000;
+    margin: 6px;
+    cursor: pointer;
+    padding: 10px 15px;
+    color: #fff;
+    font-size: 16px;
+}
+
+select {
+    height:41px;
+    line-height:41px;
+    border-radius: 0;
+}
+
+.doctor,
+.nurse {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.doctor.show,
+.nurse.show {
+  max-height: 260px;
+}
+.doctor label:first-child,
+.nurse label:first-child {
+  margin-top: 18px;
+}
+.doctor label:last-child,
+.nurse label:last-child {
+  margin-bottom: 18px;
+}
+
+/* Error messges */
+label.error *[required] {
+  background-color: #f5e8e8;
+  -webkit-box-shadow: 0 0 0px 1000px #f5e8e8 inset;
+  border-color: #e30b00;
+  color: #e30b00;
+}
+
+label.error:after {
+  content: '';
+  display: block;
+  width: 18px;
+  height: 18px;
+  background: url('../img/error-icon.png') no-repeat center center;
+  background-size: 18px;
+
+  position: absolute;
+      right: 11px;
+    top: 37px;
+}
+
+.errormessage,
+.not-existmessage {
+  color: #e30b00;
+  line-height: 22px;
+  font-size: 13px;
+  font-weight: 500;
+
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+
+label.error .errormessage,
+label.not-exist .not-existmessage {
+  max-height: 22px;
+}
+
+
+fieldset {
+  border: none;
+  position: absolute;
+  left: -640px;
+  width: 600px;
+  padding: 10px 0;
+  transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  opacity: 0;
+}
+
+.current {
+    left: 0;
+    width: 100%;
+    opacity: 1;
+    z-index: 999;
+    padding: 11px;
+    border-left: none;
+    position: relative;
+    }
+
+     .next {
+    left: 640px;
+  }
+
+.error {
+  color: #bf2424;
+  display: block;
+}

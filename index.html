@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment 2 - Marina Jensen</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,700,900" rel="stylesheet">
+	<link href="css/main.css" type="text/css" rel="stylesheet" />
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/main.js"></script>
+</head>
+<body>
+	<div class="site-container">
+		<article>
+			<h1>Pharmacy Inc.</h1>
+		</article>
+		<div class="inside-container">
+			<form id="first-form" novalidate="novalidate">
+				<ul id="progressBar">
+			      <li class="bar bar-current active"><span>1.</span></li>
+			      <li class="bar"><span>2.</span></li>
+			      <li class="bar"><span>3.</span></li>
+			    </ul>
+				<div id="fieldsets">
+					<fieldset class="current">
+						<label>
+							First Name
+							<input type="text" required="required" />
+							<div class="errormessage">
+								Please enter your first name
+							</div>
+						</label>
+
+						<label>
+							Last Name
+							<input type="text" required="required" />
+							<div class="errormessage">
+								Please enter your last name
+							</div>
+						</label>
+
+						<label>
+							Profession
+							<select required="required" id="iam">
+								<option>Select something</option>
+								<option value="doc">Doctor</option>
+								<option value="nur">Nurse</option>
+							</select>
+							<div class="errormessage">
+								You need to tell us your profession
+							</div>
+						</label>
+						<div class="doctor">
+							<input class="radio" type="radio" name="type" checked="checked">
+
+							<label class="extra-input" >
+								SV-number
+								<input disabled="true" type="number" id="SV" name="SV" maxlength="6" size="6">
+							</label>
+							<br><br>
+							<input class="radio2" type="radio" name="type">
+								<label class="extra-input" >
+									City
+									<input class="cw" type="text" />
+								</label>
+									<label class="extra-input">
+									Workplace
+									<input class="cw"  type="text" />
+								</label>
+						</div>
+						<div class="nurse">
+								<label class="extra-input" >
+									City
+									<input type="text" />
+								</label>
+									<label class="extra-input">
+									Workplace
+									<input  type="text" />
+								</label>
+						</div>
+					</fieldset>
+					<fieldset class="next">
+						<label>
+							Email
+							<input type="email" name="email">
+							<div class="errormessage">
+								Please enter an email
+							</div>
+						</label>
+						<label>
+							Speciality
+							<input type="text" name="email">
+							<div class="errormessage">
+								Please enter speciality
+							</div>
+						</label>
+						<label>
+							Password
+							<input type="password" name="password">
+							<div class="errormessage">
+								Please enter a password
+							</div>
+						</label>
+						<label>
+							Confirm Password
+							<input type="password" name="password">
+							<div class="errormessage">
+								Please confirm password
+							</div>
+						</label>
+					</fieldset>
+					<fieldset class="next">
+						<h2>Thank you fo registering!</h2>
+						<p>Click OK to be redirected to the home page.</p>
+					</fieldset>
+					<a class="back-btn">Back</a>
+  					<input type="submit" value="Next">
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
