@@ -3,7 +3,7 @@
 <head>
 	<title>Assignment 2 - Marina Jensen</title>
 	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
 	<link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,700,900" rel="stylesheet">
 	<link href="css/main.css" type="text/css" rel="stylesheet" />
 	<script src="js/jquery-3.2.1.min.js"></script>
@@ -29,7 +29,7 @@
 				<div id="fieldsets">
 					<fieldset class="current">
 						<label>
-							First Name
+							<span>First Name</span>
 							<input type="text" required="required" />
 							<div class="errormessage">
 								Please enter your first name
@@ -37,7 +37,7 @@
 						</label>
 
 						<label>
-							Last Name
+							<span>Last Name</span>
 							<input type="text" required="required" />
 							<div class="errormessage">
 								Please enter your last name
@@ -45,7 +45,7 @@
 						</label>
 
 						<label>
-							Profession
+							<span>Profession</span>
 							<select required="required" id="iam">
 								<option>Select something</option>
 								<option value="doc">Doctor</option>
@@ -59,7 +59,7 @@
 							<input class="radio" type="radio" name="type"  checked="checked">
 
 							<label class="sv-nr extra-input" >
-								SV-number
+								<span>SV-number</span>
 								<input type="number" id="SV" name="SV" maxlength="6" size="6">
 								<div class="errormessage">
 								Please enter your SV number
@@ -68,14 +68,14 @@
 							<br>
 							<input id="radio2" class="radio2" type="radio" name="type">
 								<label class="doc-city extra-input" >
-									City
+									<span>City</span>
 									<input class="cw" type="text" disabled="true" />
 									<div class="errormessage">
 								Please enter your city
 							</div>
 								</label>
 									<label class="doc-work extra-input">
-									Workplace
+									<span>Workplace</span>
 									<input class="cw"  type="text" disabled="true" />
 									<div class="errormessage">
 								Please enter your workplace
@@ -84,15 +84,15 @@
 						</div>
 						<div class="nurse">
 								<label class="extra-input" >
-									City
+									<span>City</span>
 									<input type="text" />
 									<div class="errormessage">
 								Please enter your city
 								</div>
 								</label>
-								
+
 									<label class="extra-input">
-									Workplace
+									<span>Workplace</span>
 									<input  type="text" />
 									<div class="errormessage">
 								Please enter your workplace
@@ -105,28 +105,28 @@
 						<div id="step2-success" >
 							<p></p>
 							<label>
-								Email
+								<span>Email</span>
 								<input type="email" name="email">
 								<div class="errormessage">
 									Please enter an email
 								</div>
 							</label>
 							<label class="delete">
-								Speciality
+								<span>Speciality</span>
 								<input type="text" name="email">
 								<div class="errormessage">
 									Please enter speciality
 								</div>
 							</label>
 							<label class="delete">
-								Password
+								<span>Password</span>
 								<input type="password" name="password">
 								<div class="errormessage">
 									Please enter a password
 								</div>
 							</label>
 							<label class="delete">
-								Confirm Password
+								<span>Confirm Password</span>
 								<input type="password" name="password">
 								<div class="errormessage">
 									Please confirm password
@@ -144,8 +144,10 @@
 							<p>You will get notified within 2-3 workdays!</p>
 						</div>
 					</fieldset>
-					<a class="back-btn">Back</a>
-  					<input type="submit" value="Next">
+					<div class="btn-container">
+						<a class="back-btn" >Back</a>
+						<input type="submit" value="Next">
+					</div>
 				</div>
 			</form>
 		</div>

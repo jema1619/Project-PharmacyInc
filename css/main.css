@@ -9,12 +9,13 @@
 html, body {
 	margin: 0 auto;
 	padding: 0;
-	overflow-x: hidden;
-	max-width: 375px;
+	/*overflow-x: hidden;*/
+	/*max-width: 375px;*/
 }
 
 body {
   padding: 22px;
+  min-width: 320px;
 }
 
 .inside-container {
@@ -46,10 +47,10 @@ li {
     background: #ddd;
     position: relative;
 }
-    
+
 span {
-    opacity: 0;
-    cursor: not-allowed;
+    /*opacity: 0;*/
+    /*cursor: not-allowed;*/
 }
 
 #progressBar {
@@ -126,6 +127,10 @@ label {
   position: relative;
 }
 
+label span {
+  display: inline-block;
+}
+
 label + label {
   margin-top: 20px;
 }
@@ -141,14 +146,13 @@ input[type='email'] {
   border: solid 1px #ddd;
   padding: 6px;
   width: 100%;
-  display: block;
+  display: inline-block;
   font-size: 16px;
-  line-height: 1;
   margin-top: 6px;
 }
 
 #radio2 {
-    margin-top: 6em;
+    margin-top: 100px;
 }
 
 input[type='radio'] {
@@ -160,10 +164,9 @@ input[type='radio'] {
 input[type='number'] {
   width: 100%;
   border: solid 1px #ddd;
-  padding: 10px 6px;
-  display: block;
+  padding: 6px;
+  display: inline-block;
   font-size: 16px;
-  line-height: 1;
   margin-top: 6px;
 }
 
@@ -174,15 +177,16 @@ input[type='number'] {
 
 .sv-nr {
     width: 80%;
+    margin-top: 5px;
 }
 
 .doc-city {
-    margin-top: -5em;
+    margin-top: -73px;
     width: 80%;
 }
 
 .doc-work {
-    margin-top: -6px;
+    margin-top: -1px;
     width: 80%;
 }
 
@@ -241,7 +245,7 @@ select {
 }
 .formerror {
   display: block;
-  height: 200px;
+  margin-bottom: 30px;
 }
 .doctor label:first-child,
 .nurse label:first-child {
@@ -316,9 +320,55 @@ fieldset {
 
 .next {
     left: 640px;
+    /*display: none;*/
   }
 
 .error {
   color: #bf2424;
   display: block;
+}
+
+
+
+
+@media only screen and (min-width: 600px) {
+  body {
+   max-width: 800px;
+  }
+
+  #fieldsets {
+    margin: 0 22px;
+  }
+
+  .btn-container {
+    margin: 22px 0;
+  }
+
+  label.error:after {
+    top: 15px;
+  }
+
+  label span {
+    width: 20%;
+  }
+
+
+  input[type='text'],
+  input[type='number'],
+  select, input[type='password'],
+  input[type='email'] {
+    width: 79%;
+  }
+
+  label.error .errormessage, label.not-exist .not-existmessage {
+    padding-left: 21%;
+  }
+
+  .sv-nr {
+    margin-top: 19px;
+}
+  
+  .next {
+    left: 756px;
+  }
 }
