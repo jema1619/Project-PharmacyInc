@@ -3,13 +3,13 @@ var j;
 $(document).ready(function() {
 
 	$(".manual").hide();
-	
+
 	// show/hide stuff based on if user is doc or not
 	$("#iam").change( function() {
 		var val = $(this).find("option:selected").attr("value");
 		$(".doctor").removeClass("show");
 		$(".nurse").removeClass("show");
-		
+
 		if ( val == "doc" ) {
 			$(".doctor").addClass("show");
 			$(".nurse input").removeAttr('required');
@@ -38,7 +38,7 @@ $(document).ready(function() {
       		$(".back-btn").removeClass("visible");
       	}
 	}
- 
+
 	function nextSection(){
   		var i = $("fieldset.current").index();
   		if (i < 2){
@@ -54,15 +54,15 @@ $(document).ready(function() {
 	});
 
 	$(".radio").on("click", function(e){
- 		$("#SV").prop('disabled', false); 
+ 		$("#SV").prop('disabled', false);
  		$(".cw").prop('disabled', true);
- 		$("#SV").attr('required','required'); 
+ 		$("#SV").attr('required','required');
  		$(".cw").removeAttr('required');
  		$(".cw").closest("label").removeClass("error");
 	});
 
 	$(".radio2").on("click", function(e){
-	 	$("#SV").prop('disabled', true); 
+	 	$("#SV").prop('disabled', true);
 	 	$(".cw").prop('disabled', false);
 	 	$("#SV").removeAttr('required');
 	 	$(".cw").attr('required','required');
@@ -70,7 +70,7 @@ $(document).ready(function() {
 	});
 
 
-	$("#manually").on("click", function(e){		
+	$("#manually").on("click", function(e){
 		$( ".delete" ).remove();
 		$( "#step2-success p" ).text( "We ned to manually register you. Please give us your email to get notified" );
 		$('.next input').attr('required','required');
@@ -96,7 +96,7 @@ $(document).ready(function() {
 	});
 
 
-	
+
 	$("form").submit(function(e) {
 		var form = $(this);
 		var postform = true;
@@ -132,7 +132,7 @@ $(document).ready(function() {
 					while (i<data.length && found==false){
 						if(details.length==4){
 							for(var k=0; k<details.length;k++){
-						
+
 								if(details[k] == data[i].firstname){
 									correct++;
 								}
@@ -155,7 +155,7 @@ $(document).ready(function() {
 							}
 						}else if (details.length==5){
 							for(var k=0; k<details.length;k++){
-							
+
 								if(details[k] == data[i].firstname){
 									correct++;
 								}
@@ -172,7 +172,7 @@ $(document).ready(function() {
 								if(details[k] == data[i].workplace){
 									correct++;
 								}
-							
+
 							}
 
 							if(correct==details.length){
@@ -182,7 +182,7 @@ $(document).ready(function() {
 								correct=0;
 							}
 						}
-						
+
 					}
 					if(found==true){
 						$('.next input').attr('required','required');
@@ -193,7 +193,7 @@ $(document).ready(function() {
 					}else{
 						//alert(details);
 						$(".formerror").removeClass("hidden");
-					}	
+					}
 				});
 			}
 
