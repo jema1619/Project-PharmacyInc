@@ -1,359 +1,53 @@
 <!DOCTYPE html>
 
 <html>
-	<head>
-<style>
-h2{
-	color: black;
-}
+  <head>
+    <title>Project</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width"/>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,700i,900" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/main.js"></script>
+  </head>
+  <body>
+    <header>
+      <div id="content-mobile">
+        <nav role="navigation">
+          <div id="menuToggle">
+            <input type="checkbox" />
 
-#content-desktop{
-	display: block;
-}
-#content-mobile{
-	display: none;
-}
-@media screen and (max-width:768px){
-	#content-desktop{
-		display: none;
-	}
-	#content-mobile{
-		display: block;
-	}
-}
-/*....................new man.........*/
-body
-{
-  margin: 0;
-  padding: 0;
-  color: #cdcdcd;
-  font-family: "Avenir Next", "Avenir", sans-serif;
-}
-
-a
-{
-  text-decoration: none;
-  color: lightgrey;
-
-  transition: color 0.3s ease;
-}
-
-a:hover
-{
-  color: tomato;
-}
-
-#menuToggle
-{
-  display: block;
-  position: relative;
-  top: 50px;
-  left: 50px;
-
-  z-index: 1;
-
-  -webkit-user-select: none;
-  -moz-user-select: none;
-   -ms-user-select: none;
-       user-select: none;
-}
-
-#menuToggle input
-{
-  display: block;
-  width: 40px;
-  height: 32px;
-  position: absolute;
-  top: -7px;
-  left: -5px;
-
-  cursor: pointer;
-
-  opacity: 0; /* hide this */
-  z-index: 2; /* and place it over the hamburger */
-
-  -webkit-touch-callout: none;
-}
-
-/*
- * Just a quick hamburger
- */
-#menuToggle span
-{
-  display: block;
-  width: 33px;
-  height: 4px;
-  margin-bottom: 5px;
-  position: relative;
-
-  background: white;
-  border-radius: 3px;
-
-  z-index: 1;
-
-  -webkit-transform-origin: 4px 0px;
-
-          transform-origin: 4px 0px;
-
-  transition: background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease,
-              -webkit-transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
-
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease,
-              -webkit-transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-}
-
-#menuToggle span:first-child
-{
-  -webkit-transform-origin: 0% 0%;
-          transform-origin: 0% 0%;
-}
-
-#menuToggle span:nth-last-child(2)
-{
-  -webkit-transform-origin: 0% 100%;
-          transform-origin: 0% 100%;
-}
-
-/*
- * Transform all the slices of hamburger
- * into a crossmark.
- */
-#menuToggle input:checked ~ span
-{
-  opacity: 1;
-  -webkit-transform: rotate(45deg) translate(-2px, -1px);
-          transform: rotate(45deg) translate(-2px, -1px);
-  background: #232323;
-}
-
-/*
- * But let's hide the middle one.
- */
-#menuToggle input:checked ~ span:nth-last-child(3)
-{
-  opacity: 0;
-  -webkit-transform: rotate(0deg) scale(0.2, 0.2);
-          transform: rotate(0deg) scale(0.2, 0.2);
-}
-
-/*
- * Ohyeah and the last one should go the other direction
- */
-#menuToggle input:checked ~ span:nth-last-child(2)
-{
-  -webkit-transform: rotate(-45deg) translate(0, -1px);
-          transform: rotate(-45deg) translate(0, -1px);
-}
-
-/*
- * Make this absolute positioned
- * at the top left of the screen
- */
-#menu
-{
-  position: absolute;
-  width: 300px;
-  margin: -100px 0 0 -50px;
-  padding: 50px;
-  padding-top: 125px;
-margin-top: -150px;
-  background: black;
-	height: 500px;
-  list-style-type: none;
-  -webkit-font-smoothing: antialiased;
-  /* to stop flickering of text in safari */
-
-  -webkit-transform-origin: 0% 0%;
-
-          transform-origin: 0% 0%;
-  -webkit-transform: translate(-100%, 0);
-          transform: translate(-100%, 0);
-
-  transition: -webkit-transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), -webkit-transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-}
-
-#menu li
-{
-  padding: 10px 0;
-  font-size: 22px;
-	margin-top: 30px;
-}
-.topnav{
-	margin-top: 60px;
-	background: black;
-}
-
-/*
- * And let's slide it in from the left
- */
-#menuToggle input:checked ~ ul
-{
-  -webkit-transform: none;
-          transform: none;
-}
-
-/*.......................topnav...*/
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-}
-
-li {
-    float: left;
-}
-
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 79px;
-    text-decoration: none;
-}
-
-li a:hover {
-    background-color: #111;
-}
-/*.................rep...........*/
-.mobile ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-		margin-top: 70px;
-}
-.mobile ul li {
-    float: left;
-}
-
-.mobile ul li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-.mobile ul li a:hover {
-    background-color: #111;
-}
-h7{
-	color: silver;
-}
-.test{
-	margin-top: 50px;
-	float: left;
-	color: black;
-}
-
-</style>
-		<title>Project</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="initial-scale=1, width=device-width"/>
-		<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,700i,900" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="css1/main.css">
-
-		<script type="text/javascript" src="js1/jquery.js"></script>
-		<script type="text/javascript" src="js1/file.js"></script>
-		<link rel="stylesheet" href="css1/flexslider.css" type="text/css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-		<script src="js1/jquery.flexslider.js"></script>
-	</head>
-	<script>
-	function openNav() {
-			document.getElementById("mySidenav").style.display = "block";
-	}
-
-	function closeNav() {
-			document.getElementById("mySidenav").style.display = "none";
-	}
-	</script>
-	<body>
-		<header>
-
-			<div id="content-mobile">
-				<nav role="navigation">
-				  <div id="menuToggle">
-				    <input type="checkbox" />
-
-				    <span></span>
-						<span></span>
-				    <span></span>
-				    <ul id="menu">
-				      <li><a href="#">My Page</a></li>
-							<li><a href="#">Newsletter</a></li>
-							<li><a href="#">Area of Care</a></li>
-							<li><a href="#">Order</a></li>
-				    </ul>
-				  </div>
-				</nav>
-				<div class="mobile">
-				<ul>
-					<li><a class="active" href="#home">Diabetes</a></li>
-					<li><a href="#news">Oncology</a></li>
-					<li><a href="#contact">Respiretory</a></li>
-					<li><a href="#about">Cardio Vascular</a></li>
-				</div>
-				</ul>
-				<div class="man">
-					<div class="column left" style="background-color:white;">
-						<h2>Diabetes</br>Pic</h2>
-					</div>
-					<div class="test">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</br>
-					labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</br>
-					 laboris incididunt ut nisised do eiusmod tempor  veniam, quis nostrud  veniam, quis
-					 nostrud</div>
-					<a href="javascript:void(0);" class="icon" onclick="myFunction()">
-
-
-					</a>
-				</div>
-			</div>
-			<nav class="nav">
-
-
-				</div>
-			</nav>
-		</header>
-
-		<main>
-			<div id="content-desktop">
-					<input type="text" id="ip2" placeholder="search.."/></br>
-					<h7>s</h7>
-					<ul>
-					  <li><a class="active" href="#home">Diabetes</a></li>
-					  <li><a href="#news">Oncology</a></li>
-					  <li><a href="#contact">Respiretory</a></li>
-					  <li><a href="#about">Cardio Vascular</a></li>
-					</ul>
-			<div class="row">
-			  <div class="column left" style="background-color:#aaa;">
-			    <h2>Diabetes</h2>
-			 	</div>
-
-			</div>
-			<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</br>
-			labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</br>
-			 laboris incididunt ut nisised do eiusmod tempor  veniam, quis nostrud  veniam, quis
-			 nostrud</div>
-		</div>
-		<div id="content-mobile">
-
-		</main>
-
-	</body>
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul id="menu">
+              <a href="#"><li>My Page</li></a>
+              <a href="#"><li>Newsletter</li></a>
+              <a href="#"><li>Area of Care</li></a>
+              <a href="#"><li>Order</li></a>
+            </ul>
+          </div>
+        </nav>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()"></a>
+        </div>
+    </header>
+    <main>
+      <section>
+        <ol>
+          <li>Dibetee</li>
+          <li>Oncology</li>
+          <li>Repiratory</li>
+          <li>cadio vascula</li>
+        </ol>
+      </section>
+      <div id="content-desktop">
+          <input type="text" id="ip2" placeholder="search.."/>
+          <img src="">
+          <h1>Diabetes</h1>
+          <article>
+            <p>ndgkjsfv g gjnrds gkjsb gkjsrngkjrwnwgkjre gerkj gekrn</p>
+          </article>
+     </div>
+    </main>
+  </body>
 </html>

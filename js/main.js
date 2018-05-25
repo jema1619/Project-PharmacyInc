@@ -246,4 +246,50 @@ function validateField( field ) {
 function validateEmail(email) {
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
+
 }
+
+$(document).ready(function() {
+
+	$(".showmenu").click(function(event) {
+		event.preventDefault();
+		$(".nav").toggleClass("open");
+	});
+
+	$("#vehicles").click(function(event) {
+		event.preventDefault();
+		$(".vehicleImages").addClass("active");
+		$(".landscapeImages").removeClass("active");
+		$(".iphoneImages").removeClass("active");
+	});
+
+	$("#landscapes").click(function(event) {
+		event.preventDefault();
+		$(".landscapeImages").addClass("active");
+		$(".iphoneImages").removeClass("active");
+		$(".vehicleImages").removeClass("active");
+	});
+
+	$("#iphone").click(function(event) {
+		event.preventDefault();
+		$(".iphoneImages").addClass("active");
+		$(".landscapeImages").removeClass("active");
+		$(".vehicleImages").removeClass("active");
+	});
+
+	$("#all").click(function(event) {
+		event.preventDefault();
+		$(".vehicleImages").addClass("active");
+		$(".iphoneImages").addClass("active");
+		$(".landscapeImages").addClass("active");
+	});
+
+		function openNav() {
+			document.getElementById("mySidenav").style.display = "block";
+	}
+
+	function closeNav() {
+			document.getElementById("mySidenav").style.display = "none";
+	}
+
+});
