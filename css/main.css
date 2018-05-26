@@ -1,5 +1,5 @@
 * {
-	font-family: 'Merriweather', serif;
+	font-family: 'Lato', serif;
 	font-weight: 400;
 	-webkit-font-smoothing: antialiased;
 }
@@ -69,12 +69,26 @@ form {
   position: relative;
 }
 
+h3 {
+    margin: 33px 0 6px 0;
+}
+
+#form-container {
+	border: 2px solid #ddd;
+    padding: 8px;
+}
+
 #fieldsets {
-    min-height: 340px;
     margin: 0 auto;
-    padding: 0px 3px;
-    box-sizing: border-box;
-  }
+    padding: 8px;
+    overflow: hidden;
+	z-index: 999;
+	position: relative;
+}
+
+.btn-container {
+    height: 54px;
+}
 
 .bar {
   color: #a7a7a7;
@@ -280,6 +294,7 @@ select {
   overflow: hidden;
   transition: max-height 0.2s ease-out;
 }
+
 .doctor.show,
 .nurse.show {
   max-height: 260px;
@@ -290,14 +305,57 @@ select {
 .formerror.hidden{
   display: none;
 }
+
 .formerror {
-  display: block;
-  margin-bottom: 30px;
+    border: 2px solid #e30b00;
+    padding: 18px 12px;
+    border-radius: 36px;
+    background-color: #f5e8e8;
+    text-align: right;
+    margin: 6px;
 }
+
+.formerror img {
+    width: 43px;
+    display: inline-block;
+    float: left;
+    margin: 15px 0px 0 -5px;
+
+}
+
+.formerror p {
+
+    text-align: left;
+    margin: 0 0 9px;
+    font-size: 13px;
+    display: inline-block;
+    width: 77%;
+    line-height: 18px;
+
+}
+
+#manually {
+    padding: 3px 12px;
+    color: black;
+    border: 1px solid black;
+    border-radius: 14px;
+    margin: 0 8px;
+    font-size: 14px;
+
+}
+
+
+
+#manually:hover {
+	color: white;
+	background-color: black;
+}
+
 .doctor label:first-child,
 .nurse label:first-child {
   margin-top: 18px;
 }
+
 .doctor label:last-child,
 .nurse label:last-child {
   margin-bottom: 18px;
@@ -346,12 +404,11 @@ fieldset {
   border: none;
   position: absolute;
   left: -640px;
-  width: 600px;
-  padding: 10px 0;
-  transition: all 0.3s linear;
-  -webkit-transition: all 0.3s linear;
-  -moz-transition: all 0.3s linear;
-  -ms-transition: all 0.3s linear;
+  padding: 6px;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
   opacity: 0;
 }
 
@@ -359,9 +416,6 @@ fieldset {
     left: 0;
     width: 100%;
     opacity: 1;
-    z-index: 999;
-    padding: 6px;
-    border-left: none;
     position: relative;
     }
 
@@ -379,10 +433,6 @@ fieldset {
 /* 
  LANDING PAGE
 */
-
-* {
-  font-family: 'Lato', sans-serif;
-}
 
 .logo {
   width: 100px;
@@ -636,20 +686,17 @@ h2{
 #content-desktop{
   display: none;
 }
+
 #content-mobile{
   display: block;
 }
 
-a
-{
+a {
   text-decoration: none;
   color: lightgrey;
-
-  transition: color 0.3s ease;
 }
 
-a:hover
-{
+a:hover {
   color: tomato;
 }
 
@@ -774,7 +821,6 @@ a:hover
   background: black;
   height: 500px;
   list-style-type: none;
-  -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */
 
   -webkit-transform-origin: 0% 0%;
@@ -915,6 +961,23 @@ a:hover
       margin: 4px 11px;
     
   }
+
+  .formerror {
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 46px;
+
+	}
+
+ .formerror img {
+    width: 51px;
+    margin: 16px 0px 0 0px;
+	}
+
+  .formerror p {
+    font-size: 15px;
+    width: 81%;
+}
 
   #fieldsets {
     margin: 0 22px;

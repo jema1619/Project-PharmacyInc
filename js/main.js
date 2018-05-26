@@ -4,6 +4,7 @@ var j;
 $(document).ready(function() {
 
 	$(".manual").hide();
+	$( "#step2-success p" ).hide();
 
 	// show/hide stuff based on if user is doc or not
 	$("#iam").change( function() {
@@ -56,6 +57,8 @@ $(document).ready(function() {
   		$('.next input').removeAttr('required');
   		 $(".alive").prepend(x);
   		 $( "#step2-success p" ).hide();
+  		 $(".manual").hide();
+		 $(".success").show();
 	});
 
 	$(".radio").on("click", function(e){
@@ -261,33 +264,33 @@ $(document).ready(function() {
 		$(".nav").toggleClass("open");
 	});
 
-	$("#vehicles").click(function(event) {
-		event.preventDefault();
-		$(".vehicleImages").addClass("active");
-		$(".landscapeImages").removeClass("active");
-		$(".iphoneImages").removeClass("active");
-	});
+	// $("#vehicles").click(function(event) {
+	// 	event.preventDefault();
+	// 	$(".vehicleImages").addClass("active");
+	// 	$(".landscapeImages").removeClass("active");
+	// 	$(".iphoneImages").removeClass("active");
+	// });
 
-	$("#landscapes").click(function(event) {
-		event.preventDefault();
-		$(".landscapeImages").addClass("active");
-		$(".iphoneImages").removeClass("active");
-		$(".vehicleImages").removeClass("active");
-	});
+	// $("#landscapes").click(function(event) {
+	// 	event.preventDefault();
+	// 	$(".landscapeImages").addClass("active");
+	// 	$(".iphoneImages").removeClass("active");
+	// 	$(".vehicleImages").removeClass("active");
+	// });
 
-	$("#iphone").click(function(event) {
-		event.preventDefault();
-		$(".iphoneImages").addClass("active");
-		$(".landscapeImages").removeClass("active");
-		$(".vehicleImages").removeClass("active");
-	});
+	// $("#iphone").click(function(event) {
+	// 	event.preventDefault();
+	// 	$(".iphoneImages").addClass("active");
+	// 	$(".landscapeImages").removeClass("active");
+	// 	$(".vehicleImages").removeClass("active");
+	// });
 
-	$("#all").click(function(event) {
-		event.preventDefault();
-		$(".vehicleImages").addClass("active");
-		$(".iphoneImages").addClass("active");
-		$(".landscapeImages").addClass("active");
-	});
+	// $("#all").click(function(event) {
+	// 	event.preventDefault();
+	// 	$(".vehicleImages").addClass("active");
+	// 	$(".iphoneImages").addClass("active");
+	// 	$(".landscapeImages").addClass("active");
+	// });
 
 		function openNav() {
 			document.getElementById("mySidenav").style.display = "block";
