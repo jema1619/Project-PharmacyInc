@@ -210,10 +210,23 @@ $(document).ready(function() {
 			var fieldPass2=$(this).find("*[type=password]").last();
 			if(fieldPass1.val() == fieldPass2.val()){
 				nextSection();
+				ok++;
 			}else{
 				fieldPass1.closest("label").addClass("error");
 				fieldPass2.closest("label").addClass("error");
 			}
+		}
+
+		if(ok==2){
+			if($('.success')){
+				$("input[type='submit']").attr('onclick','location.href="index2.html"');
+				console.log(0);
+			}
+			if($('.manual')){
+				$("input[type='submit']").attr('onclick','location.href="index.html"');
+				console.log(1);
+			}
+			
 		}
 
 		}
