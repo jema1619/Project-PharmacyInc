@@ -218,13 +218,14 @@ $(document).ready(function() {
 		}
 
 		if(ok==2){
-			if($('.success')){
-				$("input[type='submit']").attr('onclick','location.href="index2.html"');
-				console.log(0);
-			}
-			if($('.manual')){
+			if($('.success').css('display')=='none'){
+				
 				$("input[type='submit']").attr('onclick','location.href="index.html"');
 				console.log(1);
+			}
+			if($('.manual').css('display')=='none'){
+				$("input[type='submit']").attr('onclick','location.href="index2.html"');
+				console.log(0);
 			}
 			
 		}
