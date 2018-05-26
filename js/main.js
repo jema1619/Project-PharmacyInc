@@ -1,4 +1,5 @@
 var ok=0;
+var x;
 var j;
 $(document).ready(function() {
 
@@ -51,6 +52,10 @@ $(document).ready(function() {
   		var i = $("fieldset.current").index();
   		$("fieldset").eq(-1).addClass("current");
   		goToSection(i-1);
+  		ok--;
+  		$('.next input').removeAttr('required');
+  		 $(".alive").prepend(x);
+  		 $( "#step2-success p" ).hide();
 	});
 
 	$(".radio").on("click", function(e){
@@ -71,8 +76,8 @@ $(document).ready(function() {
 
 
 	$("#manually").on("click", function(e){
-		$( ".delete" ).remove();
-		$( "#step2-success p" ).text( "We ned to manually register you. Please give us your email to get notified" );
+		 x = $( ".delete" ).detach();
+		$( "#step2-success p" ).show();
 		$('.next input').attr('required','required');
 		ok++;
 		nextSection();

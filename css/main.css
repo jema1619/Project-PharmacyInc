@@ -233,6 +233,10 @@ input[type='number'] {
     width: 80%;
 }
 
+.alive {
+    margin: 18px 0;
+}
+
 
 input[type=submit] {
     background: #000;
