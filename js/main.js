@@ -220,12 +220,12 @@ $(document).ready(function() {
 		if(ok==2){
 			if($('.success').css('display')=='none'){
 				
-				$("input[type='submit']").attr('onclick','location.href="index.html"');
-				console.log(1);
+				$("input[type='submit']").attr('onclick','location.href="start.html"');
+				
 			}
 			if($('.manual').css('display')=='none'){
 				$("input[type='submit']").attr('onclick','location.href="index2.html"');
-				console.log(0);
+				
 			}
 			
 		}
