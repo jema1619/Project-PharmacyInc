@@ -227,6 +227,10 @@ input[type='number'] {
   margin-top: 6px;
 }
 
+input:focus {
+    border: 1px solid #4D90FE;
+}
+
 .extra-input {
     float: right;
     width: 100%;
@@ -444,7 +448,7 @@ header {
   padding-bottom: 10px;
   position: relative;
   /*background-color: rgba(120, 120, 100, 0.5);*/
-}
+}/*
 header nav.nav {
   overflow: hidden;
 }
@@ -636,7 +640,7 @@ li.listitem:hover p.imagetext {
   opacity: 1;
 }
 
-
+*/
 
 
 /*
