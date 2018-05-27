@@ -430,7 +430,7 @@ fieldset {
 }
 
 
-/* 
+/*
  LANDING PAGE
 */
 
@@ -637,41 +637,6 @@ li.listitem:hover p.imagetext {
 }
 
 
-#ip2 {
-    border-radius: 25px;
-    border: 2px solid #609;
-    padding: 20px;
-    width: 200px;
-    height: 10px;
-    margin-left: 690px;
-    margin-top: 15px;
-
-}
-.column {
-    float: left;
-    padding: 10px;
-    height: 150px; /* Should be removed. Only for demonstration */
-    margin:30px;
-    background-color:#ccc;
-}
-
-.left, .right {
-  width: 25%;
-}
-
-.middle {
-  width: 25%;
-}
-
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-.row p,h2{
-  text-align: center;
-}
 
 
 /*
@@ -683,9 +648,9 @@ h2{
 }
 
 
-#content-desktop{
+/*#content-desktop{
   display: none;
-}
+}*/
 
 #content-mobile{
   display: block;
@@ -940,7 +905,43 @@ a:hover {
 
 
 
+.landing-page p {
+  text-align: left;
+  padding: 10px 15px;
+  margin: 0;
+}
 
+.landing-page p:hover {
+  background-color: grey;
+}
+
+.landing-page p a {
+  color: white;
+}
+
+.row {
+  display: block;
+}
+
+.column {
+  width: 100%;
+  padding: 10px;
+  height: 180px; /* Should be removed. Only for demonstration */
+  background-color:#ccc;
+  clear: both;
+  margin: 20px 0;
+}
+
+#ip2 {
+  width: 100%;
+  margin: 0;
+  margin-bottom: 20px;
+  border-radius: 25px;
+  border: 2px solid #609;
+  padding: 20px;
+  height: 10px;
+  float: right;
+}
 
 
 @media only screen and (min-width: 600px) {
@@ -959,7 +960,7 @@ a:hover {
       padding: 15px;
       display: inline-block;
       margin: 4px 11px;
-    
+
   }
 
   .formerror {
@@ -1010,7 +1011,7 @@ a:hover {
   .sv-nr {
     margin-top: 19px;
 }
-  
+
   .next {
     left: 756px;
   }
@@ -1147,5 +1148,46 @@ a:hover {
   }
   main #thisisus .img_description {
     margin-top: 33px;
+  }
+
+  .row.search {
+    float: right;
+  }
+  #ip2 {
+    width: 200px;
+    float: right;
+    margin-right: 40px;
+  }
+
+
+  .row {
+    display: flex;
+    clear: both;
+  }
+
+  .column {
+      float: left;
+      padding: 10px;
+      height: 180px; /* Should be removed. Only for demonstration */
+      margin:30px;
+      background-color:#ccc;
+  }
+
+  .left, .right {
+    width: 25%;
+  }
+
+  .middle {
+    width: 25%;
+  }
+
+  /* Clear floats after the columns */
+  .row:after {
+      content: "";
+      display: table;
+      clear: both;
+  }
+  .row p,h2{
+    text-align: center;
   }
 }
