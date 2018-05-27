@@ -1,4 +1,5 @@
 var section=0;
+var x;
 
 $(document).ready(function() {
 
@@ -76,7 +77,7 @@ $(document).ready(function() {
 	});
 
 	$("#manually").on("click", function(e){
-		 x = $( ".delete" ).detach();
+		x = $( ".delete" ).detach();
 		$( "#step2-success p" ).show();
 		$('.next input').attr('required','required');
 		section++;
@@ -196,12 +197,9 @@ $(document).ready(function() {
 						$(".error-container").addClass("hidden");
 
 					}else{
-<<<<<<< HEAD
 						//alert(details);
 						$(".error-container").removeClass("hidden");
-=======
 						$(".formerror").removeClass("hidden");
->>>>>>> 64b31710a00a88e9ba33b66db057df8b34004366
 					}
 				});
 			}
