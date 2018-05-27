@@ -447,7 +447,7 @@ fieldset {
 }
 
 
-/* 
+/*
  LANDING PAGE - After succeful registration
 */
 
@@ -494,7 +494,7 @@ header {
     margin: 18px 0;
     background-color: #f9f9f9;
     border: 2px solid black;
-} 
+}
 
 .row p, h2{
   text-align: center;
@@ -544,8 +544,8 @@ a:hover {
   top: -8px;
   left: -6px;
   cursor: pointer;
-  opacity: 0; 
-  z-index: 2; 
+  opacity: 0;
+  z-index: 2;
 }
 
 #menuToggle span {
@@ -605,9 +605,25 @@ a:hover {
 }
 
 #menu li {
-    padding: 9px 0;
+    padding: 2px 0;
     font-size: 19px;
     margin: 12px 0;
+}
+
+#menu li li {
+  padding: 0;
+  font-size: 15px;
+  list-style-type: square;
+}
+#menu li ul {
+  padding-left: 40px;
+  display: none;
+}
+#menu li a:hover {
+  color: #949494;
+}
+#menu li li a {
+  color: #d0d0d0;
 }
 
 #menuToggle input:checked ~ ul {
@@ -708,7 +724,7 @@ div.learning-content img {
       padding: 15px;
       display: inline-block;
       margin: 4px 11px;
-    
+
   }
 
   .formerror {
@@ -781,7 +797,7 @@ width: 67%;
   .sv-nr {
     margin-top: 19px;
 }
-  
+
   .next {
     left: 756px;
   }
@@ -863,7 +879,7 @@ width: 67%;
     -webkit-column-count: 2;
     -moz-column-count: 2;
     column-count: 2;
-     -webkit-column-gap: 40px; 
+     -webkit-column-gap: 40px;
     -moz-column-gap: 40px;
     column-gap: 40px;
   }
