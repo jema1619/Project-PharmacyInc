@@ -313,15 +313,7 @@ select {
   max-height: 260px;
   margin-top: 19px;
 }
- /*Add some animation for it*/
- /*Stile the error message*/
-.formerror.hidden{
-  display: none;
-}
-.formerror {
-  display: block;
-  margin-bottom: 30px;
-}
+
 .doctor label:first-child,
 .nurse label:first-child {
   margin-top: 18px;
@@ -403,6 +395,24 @@ fieldset {
   display: block;
 }
 
+.error-container.hidden{
+  /* height:0px;
+   overflow: hidden;
+   border: none;*/
+   max-height: 0;
+   overflow: hidden;
+}
+
+.error-container{
+      max-height: 142px;
+      overflow: hidden;
+       -webkit-transition:height, 0.2s ease-in;
+    -moz-transition: height, 0.2s ease-in;
+    -ms-transition: height, 0.2s ease-in;
+    -o-transition: height, 0.2s ease-in;
+    transition: height, 0.2s ease-in;
+}
+
  .formerror {
     border: 2px solid #e30b00;
     padding: 18px 12px;
@@ -410,6 +420,7 @@ fieldset {
     background-color: #f5e8e8;
     text-align: right;
     margin: 6px;
+    display: block;
 }
 
 .formerror img {

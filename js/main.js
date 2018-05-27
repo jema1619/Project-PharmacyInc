@@ -84,7 +84,7 @@ $(document).ready(function() {
 		$('.next input').attr('required','required');
 		ok++;
 		nextSection();
-		$(".formerror").addClass("hidden");
+		$(".error-container").addClass("hidden");
 		$(".success").hide();
 		$(".manual").show();
 
@@ -198,11 +198,11 @@ $(document).ready(function() {
 						$('.next input').attr('required','required');
 						ok++;
 						nextSection();
-						$(".formerror").addClass("hidden");
+						$(".error-container").addClass("hidden");
 
 					}else{
 						//alert(details);
-						$(".formerror").removeClass("hidden");
+						$(".error-container").removeClass("hidden");
 					}
 				});
 			}
