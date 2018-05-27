@@ -10,61 +10,69 @@
 		<script src="js/jquery-3.2.1.min.js"></script>
   <script src="js/main.js"></script>
 	</head>
-	<body class="landing-page">
+	<body>
 		<header>
+			<section id="logo-section">
+				<h1>LOGO</h1>
+				<span>HEADER</span>
+			</section>
+			<div class="top-menu-container">
+				<ul class="top-menu">
+					<li class="item"><a href="#">Home</a></li>
+					<li class="item"><a href="#">Menu item</a></li>
+					<li class="item"><a href="#">Menu item</a></li>
+				</ul>
+			</div>
 			<div id="content-mobile">
-				<nav role="navigation">
+				<nav class="landing-nav" role="navigation">
 				  <div id="menuToggle">
 				    <input type="checkbox" />
-
 				    <span></span>
-						<span></span>
+					<span></span>
 				    <span></span>
 				    <ul id="menu">
-				      <a href="#"><li>My Page</li></a>
-				      <a href="#"><li>Newsletter</li></a>
-				      <a href="#"><li>Area of Care</li></a>
-				      <a href="#"><li>Order</li></a>
+				      <li><a href="#">Home</a></li>
+					  <li><a href="#">Menu item</a></li>
+					  <li><a href="#">Menu item</a></li>
+					  <li><a href="#">My Page</a></li>
+					  <li><a href="#">Newsletter</a></li>
+					  <li><a href="#">Area of Care</a></li>
+					  <li><a href="#">Order</a></li>s
 				    </ul>
 				  </div>
-				</nav>
-					<a href="javascript:void(0);" class="icon" onclick="myFunction()"></a>
-				</div>
+				  <input type="search" align="right" id="ip2" placeholder="search.."/>
 		</header>
 		<main>
 			<div id="content-desktop">
-			<div class="row search">
-				<input type="text" id="ip2" placeholder="search.."/>
-			</div>
 			<div class="row">
-			  <div class="column left">
-			    <h2>My Page</h2><hr>
+			  <div class="column">
+			    <h2>My Page</h2>
 			    <p><a href="#">My order</a></p>
-					<p><a href="#">Prefferences</a></p>
+				<p><a href="#">Prefferences</a></p>
 			  </div>
-			  <div class="column middle">
-			    <h2>Newsletter</h2><hr>
+			  <div class="column">
+			    <h2>Newsletter</h2>
 			    <p><a href="#">Sign up</a></p>
-					<p><a href="#">Tag a friend</a></p>
+				<p><a href="#">Tag a friend</a></p>
 			  </div>
-			  <div class="column right">
-			    <h2>Area of care</h2><hr>
-			    <p><a href="Phama.html">Diabetis</a></p>
+			  <div class="column">
+			    <h2>Area of care</h2>
+			    <p><a href="Phama.html">Diabetes</a></p>
 			  </div>
+				<div class="row">
+				  <div class="column">
+				    <h2>Order</h2>
+				    <p><a href="#">Phamacy</a></p>
+				  </div>
+				  <div class="column" >
+				    <h2>Page</h2>
+				   <p><a href="#">Phamacy</a></p>
+				  </div>
+				  <div class="column">
+				    <h2>page</h2>
+				    <p><a href="#">Phamacy</a></p>
+				  </div>
 			</div>
-			<div class="row">
-			  <div class="column left">
-			    <h2>Order</h2><hr>
-			    <p><a href="#">Phamacy</a></p>
-			  </div>
-			  <div class="column middle" >
-			    <h2>Page</h2><hr>
-			   <p><a href="#">Phamacy</a></p>
-			  </div>
-			  <div class="column right">
-			    <h2>page</h2><hr>
-			    <p><a href="#">Phamacy</a></p>
-			  </div>
 		</div>
   </div>
 		</main>

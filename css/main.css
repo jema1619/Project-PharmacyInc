@@ -1,11 +1,17 @@
 * {
-	font-family: 'Lato', sans serif;
+	font-family: 'Merriweather', serif;
 	font-weight: 400;
 	-webkit-font-smoothing: antialiased;
 }
+
 *, *:before, *:after {
 	box-sizing: border-box;
 }
+
+* li {
+  list-style: none;
+}
+
 html, body {
 	margin: 0 auto;
 	padding: 0;
@@ -14,7 +20,7 @@ html, body {
 }
 
 body {
-  padding: 22px;
+  padding: 18px 12px;
   min-width: 320px;
 }
 
@@ -69,24 +75,29 @@ form {
   position: relative;
 }
 
+
 h3 {
     margin: 33px 0 6px 0;
 }
 
 #form-container {
-	border: 2px solid #ddd;
+  border: 2px solid #ddd;
     padding: 8px;
 }
+
 
 #fieldsets {
+    min-height: 340px;
     margin: 0 auto;
+    padding: 0px 3px;
+    box-sizing: border-box;
     padding: 8px;
     overflow: hidden;
-	z-index: 999;
-	position: relative;
-}
+  z-index: 999;
+  position: relative;
+  }
 
-.btn-container {
+  .btn-container {
     height: 54px;
 }
 
@@ -112,7 +123,6 @@ span {
 
 #progressBar {
   position: relative;
-  list-style: none;
   margin: 0 0 1em;
   padding: 0;
   text-align: center;
@@ -197,6 +207,10 @@ input {
   border: none;
 }
 
+input:focus {
+    border: 1px solid #4D90FE;
+}
+
 input[type='text'],
 select, input[type='password'],
 input[type='email'] {
@@ -227,8 +241,8 @@ input[type='number'] {
   margin-top: 6px;
 }
 
-input:focus {
-    border: 1px solid #4D90FE;
+.alive {
+    margin: 18px 0;
 }
 
 .extra-input {
@@ -249,10 +263,6 @@ input:focus {
 .doc-work {
     margin-top: -1px;
     width: 80%;
-}
-
-.alive {
-    margin: 18px 0;
 }
 
 
@@ -298,7 +308,6 @@ select {
   overflow: hidden;
   transition: max-height 0.2s ease-out;
 }
-
 .doctor.show,
 .nurse.show {
   max-height: 260px;
@@ -309,57 +318,14 @@ select {
 .formerror.hidden{
   display: none;
 }
-
 .formerror {
-    border: 2px solid #e30b00;
-    padding: 18px 12px;
-    border-radius: 36px;
-    background-color: #f5e8e8;
-    text-align: right;
-    margin: 6px;
+  display: block;
+  margin-bottom: 30px;
 }
-
-.formerror img {
-    width: 43px;
-    display: inline-block;
-    float: left;
-    margin: 15px 0px 0 -5px;
-
-}
-
-.formerror p {
-
-    text-align: left;
-    margin: 0 0 9px;
-    font-size: 13px;
-    display: inline-block;
-    width: 77%;
-    line-height: 18px;
-
-}
-
-#manually {
-    padding: 3px 12px;
-    color: black;
-    border: 1px solid black;
-    border-radius: 14px;
-    margin: 0 8px;
-    font-size: 14px;
-
-}
-
-
-
-#manually:hover {
-	color: white;
-	background-color: black;
-}
-
 .doctor label:first-child,
 .nurse label:first-child {
   margin-top: 18px;
 }
-
 .doctor label:last-child,
 .nurse label:last-child {
   margin-bottom: 18px;
@@ -408,7 +374,8 @@ fieldset {
   border: none;
   position: absolute;
   left: -640px;
-  padding: 6px;
+  width: 600px;
+  padding: 10px 0;
   transition: all 0.3s ease-out;
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
@@ -420,6 +387,9 @@ fieldset {
     left: 0;
     width: 100%;
     opacity: 1;
+    z-index: 999;
+    padding: 6px;
+    border-left: none;
     position: relative;
     }
 
@@ -433,244 +403,126 @@ fieldset {
   display: block;
 }
 
+ .formerror {
+    border: 2px solid #e30b00;
+    padding: 18px 12px;
+    border-radius: 36px;
+    background-color: #f5e8e8;
+    text-align: right;
+    margin: 6px;
+}
 
-/*
- LANDING PAGE
+.formerror img {
+    width: 43px;
+    display: inline-block;
+    float: left;
+    margin: 15px 0px 0 -5px;
+
+}
+
+.formerror p {
+
+    text-align: left;
+    margin: 0 0 9px;
+    font-size: 13px;
+    display: inline-block;
+    width: 77%;
+    line-height: 18px;
+
+}
+
+#manually {
+    padding: 3px 12px;
+    color: black;
+    border: 1px solid black;
+    border-radius: 14px;
+    margin: 0 8px;
+    font-size: 14px;
+
+}
+
+#manually:hover {
+  color: white;
+  background-color: black;
+}
+
+
+/* 
+ LANDING PAGE - After succeful registration
 */
+
+* {
+  font-family: 'Lato', sans-serif;
+}
+
+#logo-section {
+    width: 66%;
+    float: right;
+}
+
+#logo-section span {
+	display: none;
+}
 
 .logo {
   width: 100px;
   margin-left: 15px;
 }
+
 header {
-  margin-bottom: 0px;
-  padding-top: 20px;
-  padding-bottom: 10px;
-  position: relative;
-  /*background-color: rgba(120, 120, 100, 0.5);*/
-}/*
-header nav.nav {
-  overflow: hidden;
+    margin: -22px -22px 0;
+    background-color: black;
+    color: white;
+    position: relative;
 }
-header nav.nav ul {
-  list-style: none;
-  width: 100%;
-  margin: 20px 0 0 0 0;
-  padding: 0 0 0 0px ;
-  background: lightgrey;
-  position: relative;
+
+#ip2 {
+    border-radius: 25px;
+    top: 20px;
+    right: 4%;
+    width: 100px;
+    position: absolute;
+    border: 2px solid #000;
+    padding: 6px 0px 6px 12px;
 }
-header nav.nav ul > li {
-  font-weight: bold;
-  padding: 8px;
-}
-header nav.nav ul > li > li:before {
-  content: '>';
-}
-header nav.nav ul > li a {
-  text-decoration: none;
-  color: black;
-}
-header nav.nav ul > li a:hover {
-  color: grey;
-}
-header ul:before {
-  content: '';
-  width: 0px;
-  border: transparent solid;
-  border-bottom-color: lightgrey;
-  border-width: 20px;
-  position: absolute;
-  top: -35px;
-  right: 25px;
-  display: block;
-}
-.contactcontent {
-  overflow: hidden;
-  margin-top: 20px;
-}
-.contacttext {
-  padding: 10px;
-  padding-top: 0;
-  box-sizing: border-box;
-}
-.contacttext h1 {
-  margin-top: 0;
-}
-.peopleimg {
-  width: 100%;
-  padding: 0;
-  margin: 0;
-}
-figure {
-  padding: 0;
-  margin: 0;
-}
-.textbox {
-  padding: 10px;
-}
-.theform {
-  padding: 0px;
-}
-.theform form {
-  background: lightgrey;
-  overflow: hidden;
-  padding: 15px;
-}
-.theform form p {
+
+.column {
+    float: left;
+    width: 100%;
+    padding: 0px;
+    min-height: 150px;
+    margin: 18px 0;
+    background-color: #f9f9f9;
+    border: 2px solid black;
+} 
+
+.row p, h2{
   text-align: center;
 }
-.theform form input,
-.theform textarea {
-  width: 100%;
-  font-size: 12pt;
-  line-height: 25pt;
-  border: 1px solid lightgrey;
-  padding: 0;
-  padding-left: 10px;
-  margin: 0;
-  margin-top: 10px;
-  height: 35px;
-  box-sizing: border-box;
-}
-.theform input.send {
-  border: none;
-  background-color: ;
-  color: #000;
-  padding: 0;
-  margin: 0;
-  margin-top: 10px;
-}
-.theform textarea {
-  height: 70px;
-}
-.workpage {
-  text-align: center;
-}
-.hamburgericon {
-  position: absolute;
-  top: 10px;
-  left: 20px;
-  display: inline;
-  width: 50px;
-}
-.nav {
-  display: none;
-}
-.nav.open {
-  display: block;
-}
-.imgwrapper {
-  width: 100%;
-}
-.allimg {
-  margin: -10px;
-  overflow: hidden;
-}
-main img.inner {
-  list-style: none;
-  padding: 0;
-  float: left;
-  margin: 10px;
-  width: calc(25% - 10px);
-}
-main ul.workinggrid {
-  width: 100%;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-main ul.workinggrid li {
-  display: none;
-}
-main ul.workinggrid li.active {
-  display: inline-block;
-}
-main div > nav.select {
-  overflow: hidden;
-}
-main div > nav.select ul {
-  list-style: none;
-  width: 100%;
-  margin: 20px 0 0 0 0;
-  padding: 0 0 0 0px ;
-  background: lightgrey;
-  position: relative;
-}
-main div > nav.select ul > li {
-  font-weight: bold;
-  padding: 8px;
-  float: left;
-}
-main div > nav.select ul > li > li:before {
-  content: '>';
-}
-main div > nav.select ul > li a {
-  text-decoration: none;
-  color: black;
-}
-main div > nav.select ul > li a:hover {
-  color: grey;
-}
-li.listitem {
-  position: relative;
-  overflow: hidden;
-}
-li.listitem img {
-  width: 100%;
-}
-p.imagetext {
-  position: absolute;
-  bottom: 3px;
-  left: 0;
-  padding: 10px;
-  margin: 0;
-  background-color: rgba(0, 0, 0, 0.4);
-  color: #fff;
-  width: calc(100% - 20px);
-  font-weight: 300;
-  opacity: 0;
-  transition: opacity 0.2s ease-out;
-  -moz-transition: opacity 0.2s ease-out;
-  -webkit-transition: opacity 0.2s ease-out;
-  -o-transition: opacity 0.2s ease-out;
-}
-li.listitem:hover p.imagetext {
-  opacity: 1;
+
+h2 {
+    color: white;
+    background-color: #1f1f1f;
+    margin: 0;
+    padding: 13px 0;
 }
 
-*/
-
-
-/*
-index 2
-*/
-
-h2{
-  color: gray;
-}
-
-
-/*#content-desktop{
-  display: none;
-}*/
-
-#content-mobile{
-  display: block;
+#content-mobile {
+    display: block;
+    padding: 22px;
 }
 
 a {
-  text-decoration: none;
-  color: lightgrey;
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease;
 }
 
 a:hover {
   color: tomato;
 }
 
-#menuToggle
-{
+#menuToggle {
   display: block;
   position: relative;
   top: 0px;
@@ -684,207 +536,98 @@ a:hover {
        user-select: none;
 }
 
-#menuToggle input
-{
+#menuToggle input {
   display: block;
   width: 40px;
   height: 32px;
   position: absolute;
-  top: -7px;
-  left: -5px;
-
+  top: -8px;
+  left: -6px;
   cursor: pointer;
-
-  opacity: 0; /* hide this */
-  z-index: 2; /* and place it over the hamburger */
-
-  -webkit-touch-callout: none;
+  opacity: 0; 
+  z-index: 2; 
 }
 
-/*
- * Just a quick hamburger
- */
-#menuToggle span
-{
-  display: block;
-  width: 33px;
-  height: 4px;
-  margin-bottom: 5px;
-  position: relative;
-
-  background: black;
-  border-radius: 3px;
-
-  z-index: 1;
-
-  -webkit-transform-origin: 4px 0px;
-
-          transform-origin: 4px 0px;
-
-  transition: background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease,
-              -webkit-transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
-
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease,
-              -webkit-transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+#menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin: 5px 0 0 0;
+    position: relative;
+    background: #fff;
+    border-radius: 3px;
+    z-index: 1;
+    -webkit-transform-origin: 4px 0px;
+    transform-origin: 4px 0px;
 }
 
-#menuToggle span:first-child
-{
+#menuToggle span:first-child {
   -webkit-transform-origin: 0% 0%;
           transform-origin: 0% 0%;
 }
 
-#menuToggle span:nth-last-child(2)
-{
+#menuToggle span:nth-last-child(2) {
   -webkit-transform-origin: 0% 100%;
           transform-origin: 0% 100%;
 }
 
-/*
- * Transform all the slices of hamburger
- * into a crossmark.
- */
-#menuToggle input:checked ~ span
-{
+#menuToggle input:checked ~ span {
   opacity: 1;
   -webkit-transform: rotate(45deg) translate(-2px, -1px);
-          transform: rotate(45deg) translate(-2px, -1px);
+   transform: rotate(45deg) translate(-2px, -1px);
   background: #fff;
 }
 
-/*
- * But let's hide the middle one.
- */
-#menuToggle input:checked ~ span:nth-last-child(3)
-{
+#menuToggle input:checked ~ span:nth-last-child(3) {
   opacity: 0;
   -webkit-transform: rotate(0deg) scale(0.2, 0.2);
           transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-/*
- * Ohyeah and the last one should go the other direction
- */
-#menuToggle input:checked ~ span:nth-last-child(2)
-{
+#menuToggle input:checked ~ span:nth-last-child(2) {
   -webkit-transform: rotate(-45deg) translate(0, -1px);
           transform: rotate(-45deg) translate(0, -1px);
 }
 
-/*
- * Make this absolute positioned
- * at the top left of the screen
- */
 #menu {
-  position: absolute;
-  width: 400px;
-  margin: -100px 0 0 -50px;
-  padding: 125px 50px 50px 50px;
-  background: black;
-  height: 500px;
-  list-style-type: none;
-  /* to stop flickering of text in safari */
-
-  -webkit-transform-origin: 0% 0%;
-
-          transform-origin: 0% 0%;
-  -webkit-transform: translate(-100%, 0);
-          transform: translate(-100%, 0);
-
-  transition: -webkit-transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), -webkit-transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    position: absolute;
+    width: 100%;
+    margin: 13px 0 0 -28px;
+    padding: 6px 0 73px 86px;
+    background: black;
+    -webkit-transform: translate(-100%, 0);
+    transform: translate(-100%, 0);
+    transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
 }
 
-#menu li
-{
-  padding: 10px 0;
-  font-size: 22px;
-  margin-top: 30px;
-}
-.topnav{
-  margin-top: 60px;
-  background: black;
+#menu a {
+  color: white;
 }
 
-/*
- * And let's slide it in from the left
- */
-#menuToggle input:checked ~ ul
-{
+#menu li {
+    padding: 9px 0;
+    font-size: 19px;
+    margin: 12px 0;
+}
+
+#menuToggle input:checked ~ ul {
   -webkit-transform: none;
           transform: none;
 }
 
-/*.......................topnav...*/
+.top-menu-container {
+    display: none;
+  }
 
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-  width: 70%;
-  margin-top:40px;
-
-}
-
-.topnav a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 46px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.topnav a.active {
-  background-color: #4CAF50;
-  color: white;
-}
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-}
-
-.topnav a {
-
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.topnav .icon {
-  display: none;
-}
 
 .mobile ul {
-    list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #333;
     margin-top: 70px;
 }
+
 .mobile ul li {
     float: left;
 }
@@ -907,45 +650,46 @@ a:hover {
   color: black;
 }
 
+/* DIABETES PAGE  */
 
-
-.landing-page p {
-  text-align: left;
-  padding: 10px 15px;
-  margin: 0;
+#learning-section {
+    padding: 11px 0;
 }
 
-.landing-page p:hover {
-  background-color: grey;
+#learning-section ol {
+    overflow: hidden;
+    text-align: center;
+    padding: 0;
+    margin: 0;
 }
 
-.landing-page p a {
-  color: white;
+
+#learning-section ol li {
+    float: left;
+    font-size: 12px;
+    padding: 3px;
+    width: 25%;
+    border: 1px solid black;
+    background-color: #cbcbcb;
 }
 
-.row {
-  display: block;
+
+#learning-section ol li:first-child {
+    border-bottom: none;
+    background-color: #fff;
 }
 
-.column {
-  width: 100%;
-  padding: 10px;
-  height: 180px; /* Should be removed. Only for demonstration */
-  background-color:#ccc;
-  clear: both;
-  margin: 20px 0;
+div.learning-content h1 {
+    margin: 9px 3px;
 }
 
-#ip2 {
-  width: 100%;
-  margin: 0;
-  margin-bottom: 20px;
-  border-radius: 25px;
-  border: 2px solid #609;
-  padding: 20px;
-  height: 10px;
-  float: right;
+div.learning-content img {
+    width: 100%;
 }
+
+
+
+
 
 
 @media only screen and (min-width: 600px) {
@@ -964,25 +708,47 @@ a:hover {
       padding: 15px;
       display: inline-block;
       margin: 4px 11px;
-
+    
   }
 
   .formerror {
-    width: 50%;
-    margin: 0 auto;
-    border-radius: 46px;
-
-	}
-
- .formerror img {
-    width: 51px;
-    margin: 16px 0px 0 0px;
-	}
+    margin: 6px auto;
+width: 67%;
+  }
 
   .formerror p {
-    font-size: 15px;
-    width: 81%;
+    width: 50%;
 }
+
+.formerror img {
+    margin: 3px 0px 0 24px;
+}
+
+  .top-menu-container {
+    display: block;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+	}
+
+  .top-menu {
+    text-align: center;
+    height: 21px;
+	}
+
+  .item {
+    float: left;
+    padding: 0 22px;
+	}
+
+	#ip2 {
+    border-radius: 25px;
+    top: 81px;
+    right: 4%;
+    width: auto;
+    position: absolute;
+    border: 1px solid #000;
+    padding: 6px 0px 6px 12px;
+	}
 
   #fieldsets {
     margin: 0 22px;
@@ -1015,97 +781,16 @@ a:hover {
   .sv-nr {
     margin-top: 19px;
 }
-
+  
   .next {
     left: 756px;
   }
 
-    header {
-    padding-bottom: 10px;
-    background-color: white;
-  }
-  header ul:before {
-    display: none;
-  }
-  header nav.nav {
-    margin-right: 20px;
-    margin-top: 0px;
-    overflow: hidden;
-    float: right;
-    display: inline;
-  }
-  header nav.nav ul {
-    overflow: hidden;
-    list-style: none;
-    padding: 0;
-    background: none;
-    margin: 0 0 0 0;
-  }
-  header nav.nav ul > li {
-    float: left;
-    margin-left: 30px;
-    font-weight: bold;
-    padding: 8px;
-  }
-  header nav.nav ul > li a {
-    text-decoration: none;
-    color: black;
-  }
-  header nav.nav ul > li a :hover {
-    color: grey;
-  }
-  .hamburgericon {
-    display: none;
-  }
-  .nav {
-    display: block;
-  }
-  main ul.workinggrid {
-    margin: 0;
-    width: 100%;
-  }
-  main ul.workinggrid li.listitem {
-    float: left;
-    width: 49%;
-    margin-left: 2%;
-  }
-  main ul.workinggrid li.listitem:nth-child(2n+1) {
-    clear: left;
-    margin-left: 0;
-  }
-  footer .footerCol {
-    padding-left: 3%;
-    width: 33.3%;
-    float: left;
-    padding: 0;
-    margin: 0;
-  }
-  .footerCol + .footerCol {
-    border-left: 1px solid black;
-  }
-  #thisisus div {
-    overflow: hidden;
-    margin-top: 16px;
-  }
-  #thisisus img {
-    float: left;
-    width: 20%;
-    margin-top: 1%;
-  }
-  #thisisus .img_description {
-    float: left;
-    width: 78%;
-    margin-left: 2%;
-    margin-bottom: 10px;
-  }
+  /*
+     LANDING PAGE - AFTERS SUCCESFULL REGISTRATION
+  */
 
-    .topnav a:not(:first-child) {display: none;}
-  .topnav a.icon {
-    float: right;
-
-  }
-
-   .topnav.responsive {position: relative;}
+  .topnav.responsive {position: relative;}
   .topnav.responsive .icon {
     position: absolute;
     right: 0;
@@ -1117,81 +802,70 @@ a:hover {
     text-align: left;
   }
 
-    #content-desktop{
-    display: block;
-  }
-  #content-mobile{
-    display: none;
-  }
+  #logo-section {
+    color: black;
+    width: 100%;
+    float: none;
+	}
 
-  main ul.workinggrid li.listitem {
-    float: left;
-    width: 33%;
-    margin-left: 0.5%;
-  }
-  main ul.workinggrid li.listitem:nth-child(2n+1) {
-    clear: none;
-    margin-left: 0.5%;
-  }
-  main ul.workinggrid li.listitem:nth-child(3n+1) {
-    margin-left: 0;
-    clear: left;
-  }
-  main .contacttext {
-    float: left;
-    width: 66.667%;
-  }
-  main .theform {
-    float: left;
-    width: 33.333%;
-  }
-  main #thisisus img {
-    float: left;
-    width: 20%;
-    margin-top: 1%;
-  }
-  main #thisisus .img_description {
-    margin-top: 33px;
-  }
+  #logo-section h1 {
+    display: inline-block;
+    width: 40%;
+    padding: 0 33px;
+	}
 
-  .row.search {
-    float: right;
-  }
-  #ip2 {
-    width: 200px;
-    float: right;
-    margin-right: 40px;
-  }
+	#logo-section span {
+		display: initial;
+	}
 
-
-  .row {
-    display: flex;
-    clear: both;
+  .content-mobile {
+  	display: none;
   }
 
   .column {
-      float: left;
-      padding: 10px;
-      height: 180px; /* Should be removed. Only for demonstration */
-      margin:30px;
-      background-color:#ccc;
+    margin:30px;
+  	width: 25%;
+  	height: 200px;
+}
+
+	/* Clear floats after the columns */
+	.row:after {
+	    content: "";
+	    display: table;
+	    clear: both;
+	}
+
+   header {
+    height: 125px;
+    margin: 22px 0;
+    background-color: white;
+    overflow: hidden;
+	}
+
+  #menuToggle input,
+  #menuToggle span {
+  	display: none;
   }
 
-  .left, .right {
-    width: 25%;
+  /* DIABETES DESKTOP*/
+
+  #learning-section ol li {
+    font-size: 14px;
+    padding: 5px;
   }
 
-  .middle {
-    width: 25%;
+  div.learning-content h1 {
+    margin: 22px 3px;
+    text-transform: uppercase;
   }
 
-  /* Clear floats after the columns */
-  .row:after {
-      content: "";
-      display: table;
-      clear: both;
+  .learning-article p {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+     -webkit-column-gap: 40px; 
+    -moz-column-gap: 40px;
+    column-gap: 40px;
   }
-  .row p,h2{
-    text-align: center;
-  }
+
 }
