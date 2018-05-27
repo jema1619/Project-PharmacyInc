@@ -48,8 +48,8 @@ body {
     font-size: 16px;
     margin: 11px 0;
     cursor: pointer;
-    -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
 }
 
 #start-container button:hover,
@@ -81,7 +81,7 @@ h3 {
 }
 
 #form-container {
-  border: 2px solid #ddd;
+   border: 2px solid #ddd;
     padding: 8px;
 }
 
@@ -116,11 +116,6 @@ h3 {
     position: relative;
 }
 
-span {
-    /*opacity: 0;*/
-    /*cursor: not-allowed;*/
-}
-
 #progressBar {
   position: relative;
   margin: 0 0 1em;
@@ -140,6 +135,7 @@ span {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+
 #progressBar .bar:before, #progressBar .bar:after {
   position: absolute;
   left: -6px;
@@ -150,6 +146,7 @@ span {
   width: 13px;
   height: 13px;
 }
+
 #progressBar .bar:after {
   top: 0;
   -moz-transform: skew(30deg);
@@ -157,6 +154,7 @@ span {
   -webkit-transform: skew(30deg);
   transform: skew(30deg);
 }
+
 #progressBar .bar:before {
   bottom: 0;
   -moz-transform: skew(-30deg);
@@ -265,7 +263,6 @@ input[type='number'] {
     width: 80%;
 }
 
-
 input[type=submit] {
     background: #000;
     margin: 6px;
@@ -308,6 +305,7 @@ select {
   overflow: hidden;
   transition: max-height 0.2s ease-out;
 }
+
 .doctor.show,
 .nurse.show {
   max-height: 260px;
@@ -323,7 +321,6 @@ select {
   margin-bottom: 18px;
 }
 
-/* Error messges */
 label.error *[required] {
   background-color: #f5e8e8;
   -webkit-box-shadow: 0 0 0px 1000px #f5e8e8 inset;
@@ -338,7 +335,6 @@ label.error:after {
   height: 18px;
   background: url('../img/error-icon.png') no-repeat center center;
   background-size: 18px;
-
   position: absolute;
   right: 11px;
   top: 32px;
@@ -360,7 +356,6 @@ label.error .errormessage,
 label.not-exist .not-existmessage {
   max-height: 22px;
 }
-
 
 fieldset {
   border: none;
@@ -387,7 +382,6 @@ fieldset {
 
 .next {
     left: 640px;
-    /*display: none;*/
   }
 
 .error {
@@ -396,15 +390,12 @@ fieldset {
 }
 
 .error-container.hidden{
-  /* height:0px;
-   overflow: hidden;
-   border: none;*/
    max-height: 0;
    overflow: hidden;
 }
 
 .error-container{
-      max-height: 142px;
+      max-height: 160px;
       overflow: hidden;
        -webkit-transition:height, 0.2s ease-in;
     -moz-transition: height, 0.2s ease-in;
@@ -431,14 +422,12 @@ fieldset {
 }
 
 .formerror p {
-
     text-align: left;
     margin: 0 0 9px;
     font-size: 13px;
     display: inline-block;
     width: 77%;
     line-height: 18px;
-
 }
 
 #manually {
@@ -448,7 +437,6 @@ fieldset {
     border-radius: 14px;
     margin: 0 8px;
     font-size: 14px;
-
 }
 
 #manually:hover {
@@ -520,12 +508,12 @@ h2 {
 
 a {
     text-decoration: none;
-    color: black;
+    color: #000;
     transition: color 0.3s ease;
 }
 
 a:hover {
-  color: tomato;
+  border-bottom: 1px solid #000;
 }
 
 #menuToggle {
@@ -533,9 +521,7 @@ a:hover {
   position: relative;
   top: 0px;
   left: 0px;
-
   z-index: 1;
-
   -webkit-user-select: none;
   -moz-user-select: none;
    -ms-user-select: none;
@@ -619,15 +605,17 @@ a:hover {
 #menu li li {
   padding: 0;
   font-size: 15px;
-  list-style-type: square;
 }
+
 #menu li ul {
   padding-left: 40px;
   display: none;
 }
+
 #menu li a:hover {
   color: #949494;
 }
+
 #menu li li a {
   color: #d0d0d0;
 }
@@ -644,30 +632,6 @@ a:hover {
 .menu-item:before{
   content: url('../img/plus.png');
   vertical-align: -20%;
-}
-
-.mobile ul {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-    margin-top: 70px;
-}
-
-.mobile ul li {
-    float: left;
-}
-
-.mobile ul li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-.mobile ul li a:hover {
-    background-color: #111;
 }
 
 .test{
@@ -689,7 +653,6 @@ a:hover {
     margin: 0;
 }
 
-
 #learning-section ol li {
     float: left;
     font-size: 12px;
@@ -698,7 +661,6 @@ a:hover {
     border: 1px solid black;
     background-color: #cbcbcb;
 }
-
 
 #learning-section ol li:first-child {
     border-bottom: none;
@@ -739,7 +701,7 @@ div.learning-content img {
 
   .formerror {
     margin: 6px auto;
-width: 67%;
+    width: 67%;
   }
 
   .formerror p {
@@ -747,7 +709,7 @@ width: 67%;
 }
 
 .formerror img {
-    margin: 3px 0px 0 24px;
+    margin: 8px 0px 0 8px;
 }
 
   .top-menu-container {
@@ -853,13 +815,6 @@ width: 67%;
   	width: 25%;
   	height: 200px;
 }
-
-	/* Clear floats after the columns */
-	.row:after {
-	    content: "";
-	    display: table;
-	    clear: both;
-	}
 
    header {
     height: 125px;
