@@ -1,29 +1,30 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Parmachy Inc - Home</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="initial-scale=1, width=device-width"/>
-	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,700i,900" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<script src="js/jquery-3.2.1.min.js"></script>
-	<script src="js/main.js"></script>
-</head>
-<body>
-	<header>
-		<section id="logo-section">
-			<h1>LOGO</h1>
-			<span>HEADER</span>
-		</section>
-		<div class="top-menu-container">
-			<ul class="top-menu">
-				<li class="item"><a href="home.html">Home</a></li>
-				<li class="item"><a href="#">Menu item</a></li>
-				<li class="item"><a href="#">Menu item</a></li>
-			</ul>
-		</div>
-		<div id="content-mobile">
-			<nav class="landing-nav" role="navigation">
+	<head>
+		<title>Parmachy Inc - Home</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1, width=device-width"/>
+		<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,700i,900" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<script src="js/jquery-3.2.1.min.js"></script>
+		<script src="js/main.js"></script>
+	</head>
+	<body>
+		<header>
+			<section id="logo-section">
+				<h1>LOGO</h1>
+				<span>HEADER</span>
+			</section>
+
+			<div class="top-menu-container">
+				<ul class="top-menu">
+					<li class="item"><a href="home.html">Home</a></li>
+					<li class="item"><a href="#">Menu item</a></li>
+					<li class="item"><a href="#">Menu item</a></li>
+				</ul>
+			</div>
+
+			<div id="content-mobile">
 				<div id="menuToggle">
 					<input type="checkbox" />
 					<span></span>
@@ -59,32 +60,34 @@
 					</ul>
 				</div>
 				<input type="search" align="right" id="ip2" placeholder="search.."/>
-			</header>
-			<main>
-				<div id="content-desktop">
+			</div>
+		</header>
+		
+		<main>
+			<div id="content-desktop">
+				<div class="row">
+					<div class="column">
+						<h2>My Page</h2>
+						<p><a href="#">My order</a></p>
+						<p><a href="#">Prefferences</a></p>
+					</div>
+					<div class="column">
+						<h2>Newsletter</h2>
+						<p><a href="#">Sign up</a></p>
+						<p><a href="#">Tag a friend</a></p>
+					</div>
+					<div class="column">
+						<h2>Area of care</h2>
+						<p><a href="diabetes.html">Diabetes</a></p>
+					</div>
 					<div class="row">
 						<div class="column">
-							<h2>My Page</h2>
-							<p><a href="#">My order</a></p>
-							<p><a href="#">Prefferences</a></p>
-						</div>
-						<div class="column">
-							<h2>Newsletter</h2>
-							<p><a href="#">Sign up</a></p>
-							<p><a href="#">Tag a friend</a></p>
-						</div>
-						<div class="column">
-							<h2>Area of care</h2>
-							<p><a href="diabetes.html">Diabetes</a></p>
-						</div>
-						<div class="row">
-							<div class="column">
-								<h2>Order</h2>
-								<p><a href="#">Phamacy</a></p>
-							</div>
+							<h2>Order</h2>
+							<p><a href="#">Phamacy</a></p>
 						</div>
 					</div>
 				</div>
-			</main>
-		</body>
-		</html>
+			</div>
+		</main>
+	</body>
+</html>

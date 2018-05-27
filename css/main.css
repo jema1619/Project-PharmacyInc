@@ -15,8 +15,6 @@
 html, body {
 	margin: 0 auto;
 	padding: 0;
-	/*overflow-x: hidden;*/
-	/*max-width: 375px;*/
 }
 
 body {
@@ -24,9 +22,7 @@ body {
   min-width: 320px;
 }
 
-/*
- START PAGE - LOGIN or REGISTER
- */
+/* START PAGE - LOGIN or REGISTER */
 
  #start-logo{
   margin: 24px 0;
@@ -62,12 +58,9 @@ body {
   color: white;
 }
 
+/* REGISTER PAGE */
 
-/*
- REGISTER PAGE
- */
-
- .inside-container {
+.inside-container {
   position: relative;
 }
 
@@ -75,16 +68,14 @@ form {
   position: relative;
 }
 
-
 h3 {
   margin: 33px 0 6px 0;
 }
 
 #form-container {
- border: 2px solid #ddd;
- padding: 8px;
+  border: 2px solid #ddd;
+  padding: 8px;
 }
-
 
 #fieldsets {
   min-height: 340px;
@@ -124,6 +115,7 @@ h3 {
   width: 100%;
   overflow: hidden;
 }
+
 #progressBar .bar {
   position: relative;
   float: left;
@@ -185,7 +177,6 @@ h3 {
   background-color: green;
 }
 
-
 label {
   display: block;
   font-size: 14px;
@@ -228,7 +219,6 @@ input[type='radio'] {
   margin-top: 3em;
   -webkit-appearance: radio;
 }
-
 
 input[type='number'] {
   width: 100%;
@@ -390,8 +380,8 @@ fieldset {
 }
 
 .error-container.hidden{
- max-height: 0;
- overflow: hidden;
+  max-height: 0;
+  overflow: hidden;
 }
 
 .error-container{
@@ -418,7 +408,6 @@ fieldset {
   display: inline-block;
   float: left;
   margin: 15px 0px 0 -5px;
-
 }
 
 .formerror p {
@@ -444,10 +433,7 @@ fieldset {
   background-color: black;
 }
 
-
-/*
- LANDING PAGE - After succeful registration
- */
+/* LANDING PAGE - After succeful registration */
 
  #logo-section {
   width: 66%;
@@ -675,140 +661,136 @@ div.learning-content img {
   width: 100%;
 }
 
-
-
-
-
+/* MEDIA QUERIES */
 
 @media only screen and (min-width: 600px) {
   body {
-   max-width: 800px;
- }
+    max-width: 800px;
+  }
 
- #start-container {
-  width: 75%;
-  margin: 0 auto;
-}
+   #start-container {
+    width: 75%;
+    margin: 0 auto;
+  }
 
-#start-container button {
-  width: 45%;
-  box-sizing: border-box;
-  padding: 15px;
-  display: inline-block;
-  margin: 4px 11px;
+  #start-container button {
+    width: 45%;
+    box-sizing: border-box;
+    padding: 15px;
+    display: inline-block;
+    margin: 4px 11px;
 
-}
+  }
 
-.formerror {
-  margin: 6px auto;
-  width: 67%;
-}
+  .formerror {
+    margin: 6px auto;
+    width: 67%;
+  }
 
-.formerror p {
-  width: 50%;
-}
+  .formerror p {
+    width: 50%;
+  }
 
-.formerror img {
-  margin: 8px 0px 0 8px;
-}
+  .formerror img {
+    margin: 8px 0px 0 8px;
+  }
 
-.top-menu-container {
-  display: block;
-  border-bottom: 1px solid black;
-  border-top: 1px solid black;
-}
+  .top-menu-container {
+    display: block;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+  }
 
-.top-menu {
-  text-align: center;
-  height: 21px;
-}
+  .top-menu {
+    text-align: center;
+    height: 21px;
+  }
 
-.item {
-  float: left;
-  padding: 0 22px;
-}
+  .item {
+    float: left;
+    padding: 0 22px;
+  }
 
-#ip2 {
-  top: 81px;
-  right: 4%;
-  width: auto;
-  position: absolute;
-  border: 1px solid #000;
-  border-radius: 15px;
-  padding: 6px 0px 6px 12px;
-}
+  #ip2 {
+    top: 81px;
+    right: 4%;
+    width: auto;
+    position: absolute;
+    border: 1px solid #000;
+    border-radius: 15px;
+    padding: 6px 0px 6px 12px;
+  }
 
-#fieldsets {
-  margin: 0 22px;
-}
+  #fieldsets {
+    margin: 0 22px;
+  }
 
-.btn-container {
-  margin: 22px 0;
-}
+  .btn-container {
+    margin: 22px 0;
+  }
 
-label.error:after {
-  top: 15px;
-}
+  label.error:after {
+    top: 15px;
+  }
 
-label span {
-  width: 20%;
-}
+  label span {
+    width: 20%;
+  }
 
+  input[type='text'],
+  input[type='number'],
+  select, input[type='password'],
+  input[type='email'] {
+    width: 79%;
+  }
 
-input[type='text'],
-input[type='number'],
-select, input[type='password'],
-input[type='email'] {
-  width: 79%;
-}
+  label.error .errormessage, label.not-exist .not-existmessage {
+    padding-left: 21%;
+  }
 
-label.error .errormessage, label.not-exist .not-existmessage {
-  padding-left: 21%;
-}
+  .sv-nr {
+    margin-top: 19px;
+  }
 
-.sv-nr {
-  margin-top: 19px;
-}
+  .next {
+    left: 756px;
+  }
 
-.next {
-  left: 756px;
-}
+  /* LANDING PAGE - AFTERS SUCCESFULL REGISTRATION */
 
-  /*
-     LANDING PAGE - AFTERS SUCCESFULL REGISTRATION
-     */
+  .topnav.responsive {position: relative;}
+  
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  .topnav.responsive a {
+    float:none;
+    display: block;
+    text-align: left;
+  }
 
-     .topnav.responsive {position: relative;}
-     .topnav.responsive .icon {
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-    .topnav.responsive a {
-      float:none;
-      display: block;
-      text-align: left;
-    }
+  #logo-section {
+    color: black;
+    width: 100%;
+    float: none;
+  }
 
-    #logo-section {
-      color: black;
-      width: 100%;
-      float: none;
-    }
+  #logo-section h1 {
+    display: inline-block;
+    width: 40%;
+    padding: 0 33px;
+  }
 
-    #logo-section h1 {
-      display: inline-block;
-      width: 40%;
-      padding: 0 33px;
-    }
+  #logo-section span {
+    display: initial;
+  }
 
-    #logo-section span {
-      display: initial;
-    }
-
-    .content-mobile {
-     display: none;
-   }
+  .content-mobile {
+    display: none;
+  }
 
    .column {
     margin:30px;
@@ -828,7 +810,7 @@ label.error .errormessage, label.not-exist .not-existmessage {
   	display: none;
   }
 
-  /* DIABETES DESKTOP*/
+  /* DIABETES DESKTOP */
 
   #learning-section ol li {
     font-size: 14px;
