@@ -416,7 +416,6 @@ fieldset {
  .formerror {
     border: 2px solid #e30b00;
     padding: 18px 12px;
-    border-radius: 36px;
     background-color: #f5e8e8;
     text-align: right;
     margin: 6px;
@@ -488,7 +487,7 @@ header {
 }
 
 #ip2 {
-    border-radius: 25px;
+    border-radius: 15px;
     top: 20px;
     right: 4%;
     width: 100px;
@@ -772,12 +771,12 @@ width: 67%;
 	}
 
 	#ip2 {
-    border-radius: 25px;
     top: 81px;
     right: 4%;
     width: auto;
     position: absolute;
     border: 1px solid #000;
+    border-radius: 15px;
     padding: 6px 0px 6px 12px;
 	}
 
