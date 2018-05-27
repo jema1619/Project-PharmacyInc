@@ -1,12 +1,10 @@
-var ok=0;
-var x;
-var j;
+var section=0;
+
 $(document).ready(function() {
 
 	$(".manual").hide();
 	$( "#step2-success p" ).hide();
 
-	// show/hide stuff based on if user is doc or not
 	$("#iam").change( function() {
 		var val = $(this).find("option:selected").attr("value");
 		$(".doctor").removeClass("show");
@@ -53,7 +51,7 @@ $(document).ready(function() {
   		var i = $("fieldset.current").index();
   		$("fieldset").eq(-1).addClass("current");
   		goToSection(i-1);
-  		ok--;
+  		section--;
   		$('.next input').removeAttr('required');
   		 $(".alive").prepend(x);
   		 $( "#step2-success p" ).hide();
@@ -77,12 +75,11 @@ $(document).ready(function() {
 	 	$("#SV").closest("label").removeClass("error");
 	});
 
-
 	$("#manually").on("click", function(e){
 		 x = $( ".delete" ).detach();
 		$( "#step2-success p" ).show();
 		$('.next input').attr('required','required');
-		ok++;
+		section++;
 		nextSection();
 		$(".error-container").addClass("hidden");
 		$(".success").hide();
@@ -105,8 +102,6 @@ $(document).ready(function() {
 		}
 	});
 
-
-
 	$("form").submit(function(e) {
 		var form = $(this);
 		var postform = true;
@@ -128,7 +123,7 @@ $(document).ready(function() {
 
 		} else {
 			e.preventDefault();
-				if(ok!=1){
+				if(section!=1){
 				$.ajax({
 					url: "js/users.json",
 					dataType: "JSON"
@@ -196,42 +191,44 @@ $(document).ready(function() {
 					}
 					if(found==true){
 						$('.next input').attr('required','required');
-						ok++;
+						section++;
 						nextSection();
 						$(".error-container").addClass("hidden");
 
 					}else{
+<<<<<<< HEAD
 						//alert(details);
 						$(".error-container").removeClass("hidden");
+=======
+						$(".formerror").removeClass("hidden");
+>>>>>>> 64b31710a00a88e9ba33b66db057df8b34004366
 					}
 				});
 			}
 
-		if(ok==1){
-			var fieldPass1=$(this).find("*[type=password]").first();
-			var fieldPass2=$(this).find("*[type=password]").last();
-			if(fieldPass1.val() == fieldPass2.val()){
-				nextSection();
-				ok++;
-			}else{
-				fieldPass1.closest("label").addClass("error");
-				fieldPass2.closest("label").addClass("error");
-			}
-		}
-
-		if(ok==2){
-			if($('.success').css('display')=='none'){
-
-				$("input[type='submit']").attr('onclick','location.href="start.html"');
-
-			}
-			if($('.manual').css('display')=='none'){
-				$("input[type='submit']").attr('onclick','location.href="index2.html"');
-
+			if(section==1){
+				var fieldPass1=$(this).find("*[type=password]").first();
+				var fieldPass2=$(this).find("*[type=password]").last();
+				if(fieldPass1.val() == fieldPass2.val()){
+					nextSection();
+					section++;
+				}else{
+					fieldPass1.closest("label").addClass("error");
+					fieldPass2.closest("label").addClass("error");
+				}
 			}
 
-		}
+			if(section==2){
+				if($('.success').css('display')=='none'){
 
+					$("input[type='submit']").attr('onclick','location.href="start.html"');
+
+				}
+				if($('.manual').css('display')=='none'){
+					$("input[type='submit']").attr('onclick','location.href="index2.html"');
+
+				}
+			}
 		}
 	});
 });
@@ -273,47 +270,3 @@ function validateEmail(email) {
 
 }
 
-$(document).ready(function() {
-
-	$(".showmenu").click(function(event) {
-		event.preventDefault();
-		$(".nav").toggleClass("open");
-	});
-
-	// $("#vehicles").click(function(event) {
-	// 	event.preventDefault();
-	// 	$(".vehicleImages").addClass("active");
-	// 	$(".landscapeImages").removeClass("active");
-	// 	$(".iphoneImages").removeClass("active");
-	// });
-
-	// $("#landscapes").click(function(event) {
-	// 	event.preventDefault();
-	// 	$(".landscapeImages").addClass("active");
-	// 	$(".iphoneImages").removeClass("active");
-	// 	$(".vehicleImages").removeClass("active");
-	// });
-
-	// $("#iphone").click(function(event) {
-	// 	event.preventDefault();
-	// 	$(".iphoneImages").addClass("active");
-	// 	$(".landscapeImages").removeClass("active");
-	// 	$(".vehicleImages").removeClass("active");
-	// });
-
-	// $("#all").click(function(event) {
-	// 	event.preventDefault();
-	// 	$(".vehicleImages").addClass("active");
-	// 	$(".iphoneImages").addClass("active");
-	// 	$(".landscapeImages").addClass("active");
-	// });
-
-		function openNav() {
-			document.getElementById("mySidenav").style.display = "block";
-	}
-
-	function closeNav() {
-			document.getElementById("mySidenav").style.display = "none";
-	}
-
-});
