@@ -205,10 +205,6 @@ input {
   border: none;
 }
 
-input:focus {
-  border: 1px solid #4D90FE;
-}
-
 input[type='text'],
 select, input[type='password'],
 input[type='email'] {
@@ -237,6 +233,10 @@ input[type='number'] {
   display: inline-block;
   font-size: 16px;
   margin-top: 6px;
+}
+
+input:focus {
+  border: 1px solid #52CAF2;
 }
 
 .alive {
