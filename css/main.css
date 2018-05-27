@@ -646,6 +646,10 @@ a:hover {
     display: none;
   }
 
+.menu-item:before{
+  content: url('../img/plus.png');
+  vertical-align: -20%;
+}
 
 .mobile ul {
     margin: 0;
