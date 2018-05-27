@@ -219,11 +219,11 @@ $(document).ready(function() {
 			if(section==2){
 				if($('.success').css('display')=='none'){
 
-					$("input[type='submit']").attr('onclick','location.href="start.html"');
+					$("input[type='submit']").attr('onclick','location.href="index.html"');
 
 				}
 				if($('.manual').css('display')=='none'){
-					$("input[type='submit']").attr('onclick','location.href="index2.html"');
+					$("input[type='submit']").attr('onclick','location.href="home.html"');
 
 				}
 			}
